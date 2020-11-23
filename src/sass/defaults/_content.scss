@@ -1,0 +1,100 @@
+.content p,
+.p,
+.content li,
+.li {
+	font-size: 20rem;
+	line-height: 130%;
+	letter-spacing: -0.25rem;
+}
+
+.content ul,
+.content ol {
+}
+
+.content b,
+.b {
+	font-weight: bold;
+}
+
+.content strong,
+.strong {
+	font-weight: 500;
+}
+
+.content a,
+.a {
+}
+
+.h1,
+.content h1,
+.h2,
+.content h2,
+.h3,
+.content h3,
+.h4,
+.content h4,
+.h5,
+.content h5,
+.h6,
+.content h6 {
+	font-weight: 500;
+}
+
+.h1,
+.content h1 {
+	font-size: 64rem;
+	line-height: 74/64*1;
+	letter-spacing: -1rem;
+}
+
+.h2,
+.content h2 {
+	font-size: 48rem;
+	line-height: 55/48*1;
+	letter-spacing: -1rem;
+}
+
+.h3,
+.content h3 {
+	font-size: 32rem;
+	line-height: 37/32*1;
+	letter-spacing: -0.5rem;
+}
+
+.h4,
+.content h4 {
+	font-size: 24rem;
+	line-height: 28/24*1;
+	letter-spacing: -0.5rem;
+}
+
+.h5,
+.content h5 {
+}
+
+.h6,
+.content h6 {
+}
+
+.p24 {
+	font-size: 24rem;
+	line-height: 36/24*1;
+	letter-spacing: -0.25rem;
+}
+.p18 {
+	font-size: 18rem;
+	line-height: 150%;
+	letter-spacing: -0.25rem;
+}
+.p16 {
+	font-size: 16rem;
+	line-height: 150%;
+	letter-spacing: -0.25rem;
+}
+
+.subtitle {
+	font-size: 20rem;
+	line-height: 23/20*1;
+	text-transform: uppercase;
+	letter-spacing: 2rem;
+}

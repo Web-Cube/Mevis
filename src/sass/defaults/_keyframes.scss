@@ -1,0 +1,11 @@
+@keyframes scrollDown {
+    0% {
+		transform: translateY(-12%);
+    }
+	50% {
+		transform: translateY(12%);
+    }
+    100% {
+		transform: translateY(-12%);
+    } 
+}

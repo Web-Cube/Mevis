@@ -1,0 +1,62 @@
+.owl {
+	&-prev, &-next {
+		width: 10rem;
+		height: 20rem;
+		background: none;
+		cursor: pointer;
+		position: absolute;
+		z-index: 50;
+		fill: none;
+		stroke-width: 1.5;
+		stroke: #1B1C1E;
+		border: 0;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 60rem;
+			height: 60rem;
+			border: 1px solid #1B1C1E;
+			transform: translateX(-50%) translateY(-50%) scale(0.5);
+			border-radius: 100%;
+			opacity: 0;
+			transition: ease .15s;
+		}
+		&:hover {
+			&:before {
+				transform: translateX(-50%) translateY(-50%) scale(1);
+				opacity: 1;
+			}
+		}
+	}
+	
+	&-progress {
+		height: 1px;
+		background: #F1F1F1;
+		&-bar {
+			height: 1px;
+			background: #000;
+			transition: ease .2s;
+		}
+	}
+	
+	&-stage {
+		display: flex;
+	}
+	
+	&-item {
+		float: none;
+	}
+	
+	@include max-screen($large_mobile) {
+		&-prev, &-next {
+			width: 12px;
+			height: 24px;
+			stroke-width: 2;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

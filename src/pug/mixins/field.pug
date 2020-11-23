@@ -1,0 +1,8 @@
+mixin field(label, error)
+	+e.field.field__
+		+e.INPUT.input()&attributes(attributes)
+		+e.label !{label}
+		+e.icon
+			+icon('sucsess')
+		if error
+			+e.error !{error}

@@ -1,0 +1,11 @@
+mixin btn(type)
+	if type
+		+e.BUTTON.btn.btn__&attributes(attributes)
+			+e.SPAN.text 
+				if block
+					block
+	else
+		+e.A.btn.btn__&attributes(attributes)
+			+e.SPAN.text 
+				if block
+					block

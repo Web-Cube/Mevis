@@ -1,0 +1,23 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Главная';
+	
+block header
+	include ../layouts/header_fixed
+block content
+	.dark-blue-bg
+		+b.main
+			+e.wrap.wrap
+				+e.H1.title.h2
+					| Mevis Europäische 
+					br
+					| Schwimmgemeinschaft
+				+e.subtitle.subtitle.color-orange 
+					strong Schwimmkurse für Erwachsene
+				+e.buttons.flex._center
+					+btn(class="_orange", href="#") Anmeldung
+					+btn(class="_border-white", href="#") Online bezahlen
+				+e.bottom.flex._center
+					+e.bottom-text.p Vom Anfänger zum Profi
+			+e.A.arrow.js-scroll-to(href="#schwimmen")

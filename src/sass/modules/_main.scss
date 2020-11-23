@@ -1,0 +1,66 @@
+.main {
+	min-height: 100vh;
+	padding: 100rem 0 135rem 0;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	//background: url(/img/main__bg.jpg) top no-repeat;
+	background: linear-gradient(180deg, #00204A -13%, rgba(0, 32, 74, 0) 15.73%), linear-gradient(0deg, #00204A 1.18%, rgba(0, 32, 74, 0.76) 12.82%, rgba(0, 32, 74, 0) 22.45%), linear-gradient(0deg, rgba(0, 32, 74, 0.6), rgba(0, 32, 74, 0.6)), linear-gradient(0deg, #00204A, #00204A), url(/img/main__bg.jpg);
+	background-blend-mode: normal, normal, normal, lighten, normal;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	
+	&__subtitle {
+		margin-top: 20rem;
+	}
+	
+	&__arrow {
+		position: absolute;
+		left: 50%;
+		bottom: 60rem;
+		width: 60rem;
+		height: 60rem;
+		background: url(/img/scrolldown.svg) 0 0 no-repeat;
+		background-size: 100% 100%;
+		margin-left: -30rem;
+		animation: scrollDown 2s infinite ease-in-out;
+	}
+	
+	&__bottom {
+		margin-top: 80rem;
+		overflow: hidden;
+		&-text {
+			font-weight: 500;
+			position: relative;
+			
+			&:before, &:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				width: 150rem;
+				height: 1px;
+				background: $orange;
+			}
+			&:before {
+				right: 100%;
+				margin-right: 20rem;
+			}
+			&:after {
+				left: 100%;
+				margin-left: 20rem;
+			}
+		}
+	}
+	
+	&__buttons {
+		margin-top: 80rem;
+	}
+	
+	&__btn {
+		&:not(:last-child) {
+			margin-right: 30rem;
+		}
+	}
+}
