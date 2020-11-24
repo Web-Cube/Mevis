@@ -17,6 +17,9 @@ html {
 	&.js-lock {
 		overflow: hidden;
 		margin-right: 15px;
+		@media (pointer:coarse){
+			margin-right: 0;
+		}
 	}
 }
 

@@ -1,0 +1,28 @@
+.burger {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	&__text {
+		margin-right: 10px;
+		font-size: 13px;
+	}
+	&__btn {
+		width: 27px;
+	}
+	&__line {
+		height: 2px;
+		background: #fff;
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+	}
+	
+	@include max-screen(359px) {
+		&__btn {
+			width: 25px;
+		}
+		&__text {
+			margin-right: 8px;
+		}
+	}
+}

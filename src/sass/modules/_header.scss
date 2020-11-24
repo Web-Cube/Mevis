@@ -1,0 +1,280 @@
+.header {
+	padding: 35rem 0;
+	position: sticky;
+	z-index: 100;
+	color: #fff;
+	&__wrap {
+		max-width: 1800rem;
+		width: 100%;
+		padding: 0 15px;
+		margin: auto;
+	}
+	
+	&__row {
+		margin: 0 -10rem;
+	}
+	
+	&__column {
+		padding: 0 10rem;
+		&_left, &_right {
+			width: 26%;
+		}
+		&_center {
+			width: 48%;
+		}
+	}
+	
+	&.is-fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	
+	&.is-scroll {
+		padding: 20rem 0;
+	}
+	
+	&__logo {
+		display: block;
+		width: 150rem;
+		margin-right: 20rem;
+		transform: translateY(-8rem);
+		position: relative;
+		z-index: 777;
+	}
+	
+	&__phone {
+		font-weight: 500;
+		margin-left: 35rem;
+	}
+	
+	&__nav {
+		list-style: none;
+		&-item:not(:last-child) {
+			margin-right: 30rem;
+		}
+		&-link {
+			font-weight: 500;
+			transition: ease .2s;
+			&:hover, &.is-active {
+				color: $orange;
+			}
+		}
+	}
+	
+	&__burger {
+		margin-left: 20px;
+		display: none;
+		position: relative;
+		z-index: 777
+	}
+	
+	&__hidden {
+		display: none;
+	}
+	
+	&__tel {
+		font-size: 28px;
+	}
+	
+	&__select {
+		z-index: 777;
+	}
+	
+	@include max-screen(1600px) {
+		&__nav {
+			&-item:not(:last-child) {
+				margin-right: 20rem;
+			}
+			&-link {
+				font-weight: normal;
+			}
+		}
+	}
+	
+	@include max-screen(1500px) {
+		
+		&__logo {
+			width: 140rem;
+		}
+		
+		&__column {
+			&_left, &_right, &_center {
+				width: auto;
+			}
+			&_left {
+				margin-right: auto;
+			}
+			&_right {
+				margin-left: auto;
+			}
+		}
+	}
+	
+	@include max-screen($large_desktop) {
+		&__phone {
+			display: none;
+		}
+		
+		&__row {
+			justify-content: flex-start;
+		}
+		&__column {
+			&_left {
+				margin-right: auto;
+			}
+			&_right {
+				margin-left: 30rem;
+			}
+		}
+	}
+	
+	@include max-screen($small_desktop) {
+		&__phone {
+			display: block;
+		}
+		
+		&__row {
+			justify-content: space-between;
+		}
+		&__column {
+			&_right {
+				margin-left: auto;
+			}
+		}
+	}
+	
+	@include max-screen(1200px) {
+		&__phone {
+			display: none;
+		}
+	}
+	
+	@include max-screen($large_tablet) {
+		&__column {
+			&_center {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: $dark-blue;
+				padding: 80px 15px 40px 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+				overflow-x: hidden;
+				overflow-y: auto;
+				.select__body {
+					top: auto;
+					bottom: 100%;
+					margin-bottom: 10rem;
+				}
+				.select__head {
+					background: rgba(255,255,255,.15);
+				}
+			}
+		}
+		&__burger {
+			display: flex;
+		}
+		&__hidden {
+			&_tablet {
+				display: block;
+			}
+		}
+		
+		&__nav {
+			display: block;
+			width: 100%;
+			text-align: center;
+			&-item:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+			&-link {
+				font-size: 32px;
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		padding: 20px 0;
+		&__column {
+			&_left {
+				.select {
+					display: none;
+				}
+			}
+		}
+		
+		&__hidden {
+			&_mobile {
+				display: block;
+				.select {
+					display: inline-flex;
+				}
+			}
+		}
+		
+		&__burger {
+			margin-left: 10px;
+		}
+		
+		&__nav {
+			margin-bottom: 20px;
+			&-item:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 16px;
+			}
+			&-link {
+				font-size: 20px;
+			}
+		}
+		
+		&__hidden {
+			width: 100%;
+			text-align: center;
+		}
+		
+		&__tel {
+			font-size: 16px;
+			margin-left: auto;
+			margin-top: 15px;
+			display: block;
+		}
+		&__bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			
+			.select__body {
+				top: auto;
+				bottom: 100%;
+				margin-bottom: 10rem;
+			}
+			.select__head {
+				background: rgba(255,255,255,.15);
+			}
+		}
+	}
+	
+	@include max-screen(359px) {
+		&__row {
+			margin: 0;
+		}
+		
+		&__logo {
+			width: 132rem;
+		}
+		
+		&__column {
+			&_left, &_right {
+				padding: 0;
+			}
+		}
+	}
+}

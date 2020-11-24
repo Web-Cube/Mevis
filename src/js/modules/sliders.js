@@ -10,6 +10,19 @@ import { defaults } from "./defaults";
  */
 
 var sliders = {
+	
+	tabs: (e) => {
+		
+		let index = $(e.currentTarget).index();
+  		$('.js-slider-for').trigger( 'to.owl.carousel', [index, 500] );
+		
+		if ( $(e.currentTarget).hasClass('js-slider-to') ) {
+			$('.js-slider-to.is-active').removeClass('is-active');
+			$(e.currentTarget).addClass('is-active');
+		}
+		
+	},
+	
 	selector: ".js-slider",
 
 	settings: {
@@ -165,6 +178,14 @@ var sliders = {
 		sliders.resize();
 			
 		$(window).on('resize', sliders.resize);
+		
+		$('.js-slider-about').on('changed.owl.carousel', function(event) {
+			var item = event.item.index - 2;
+			$('.js-slider-to.is-active').removeClass('is-active')
+			$('.js-slider-to:nth-child(' +item+ ')').addClass('is-active');
+			
+			console.log(item);
+		});
 	},
 };
 

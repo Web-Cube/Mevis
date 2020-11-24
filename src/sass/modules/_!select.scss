@@ -1,0 +1,137 @@
+.select {
+	position: relative;
+	font-size: 16rem;
+	line-height: 120%;
+	letter-spacing: -0.25rem;
+	&_transparent {
+		.select__head {
+			border-radius: 100rem;
+			&:hover {
+				background: rgba(255, 255, 255, 0.15);
+			}
+		}
+		.select__arrow {
+			fill: #fff;
+		}
+		.icon-global {
+			fill: #fff;
+			width: 24rem;
+			height: 24rem;
+			margin-left: 10rem;
+		}
+		
+		&.is-active {
+			.select__head {
+				background: rgba(255, 255, 255, 0.15);
+			}
+		}
+	}
+	&_lang {
+		.select__head {
+			padding: 0 30rem 0 0;
+			&:hover {
+				background: none;
+			}
+		}
+		.select__body {
+			left: auto;
+			right: 0;
+			width: 176rem;
+		}
+		.select__arrow {
+			right: 0;
+		}
+		
+		&.is-active {
+			.select__head {
+				background: none;
+			}
+		}
+	}
+	&__bg {
+		position: fixed;
+		z-index: 499;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+	
+	&__head, &__item {
+		padding: 0 20rem;
+		height: 50rem;
+		display: flex;
+		align-items: center;
+		transition: ease .2s;
+	}
+	
+	&__head {
+		position: relative;
+		padding-right: 42rem;
+		border-radius: 12rem;
+		cursor: pointer;
+	}
+	
+	&__label {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	&__arrow {
+		transition: ease .2s;
+		width: 24rem;
+		height: 24rem;
+		position: absolute;
+		right: 14rem;
+		top: 50%;
+		margin-top: -11rem;
+	}
+	
+	&__body {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		margin-top: 10rem;
+		border-radius: 12rem;
+		background: #fff;
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
+		overflow: hidden;
+		transition: ease .3s;
+		color: $black;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10rem);
+		z-index: 500;
+	}
+	
+	&__item {
+		cursor: pointer;
+		&.is-active {
+			background: $gray;
+		}
+		&:hover {
+			color: $orange;
+		}
+	}
+	
+	&.is-active {
+		.select {
+			&__arrow {
+				transform: rotate(-180deg);
+			}
+			&__body {
+				transform: translateY(0);
+				opacity: 1;
+				visibility: visible;
+			}
+			&__bg {
+				display: block;
+			}
+			&__head {
+				z-index: 500;
+			}
+		}
+	}
+}

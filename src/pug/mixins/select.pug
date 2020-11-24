@@ -1,0 +1,15 @@
+mixin select(startValue,icon)
+	+e.select.js-select.select__&attributes(attributes)
+		+e.bg.js-select-close
+		+e.INPUT.input.js-select-input(type="hidden", value=`${startValue}`)
+		+e.head.js-select-head
+			+e.label.js-select-label !{startValue}
+			if (icon)
+				+e.icon
+					+icon(`${icon}`)
+			+e.arrow
+				+icon('arrowSelect')
+		+e.body.js-select-body
+			+e.list
+				if block
+					block
