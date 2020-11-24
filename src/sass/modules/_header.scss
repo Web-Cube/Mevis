@@ -3,6 +3,14 @@
 	position: sticky;
 	z-index: 100;
 	color: #fff;
+	transition: ease .3s;
+	&.is-scroll {
+		padding: 20rem 0;
+	}
+	&.is-blue {
+		background: $dark-blue;
+		box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.15);
+	}
 	&__wrap {
 		max-width: 1800rem;
 		width: 100%;
@@ -167,6 +175,15 @@
 				flex-wrap: wrap;
 				overflow-x: hidden;
 				overflow-y: auto;
+				transition: ease .5s;
+				visibility: hidden;
+				opacity: 0;
+				transform: translateY(20px);
+				&.is-active {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
 				.select__body {
 					top: auto;
 					bottom: 100%;
@@ -202,6 +219,9 @@
 	
 	@include max-screen($small_mobile) {
 		padding: 20px 0;
+		&.is-scroll {
+			padding: 10px 0 8px 0;
+		}
 		&__column {
 			&_left {
 				.select {

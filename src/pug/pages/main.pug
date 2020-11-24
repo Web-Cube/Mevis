@@ -7,7 +7,7 @@ block header
 	include ../layouts/header_fixed
 block content
 	.dark-blue-bg
-		+b.main
+		+b.SECTION.main
 			+e.wrap.wrap
 				+e.H1.title.h2
 					| Mevis Europäische 
@@ -21,3 +21,4 @@ block content
 				+e.bottom.flex._center
 					+e.bottom-text.p Vom Anfänger zum Profi
 			+e.A.arrow.js-scroll-to(href="#schwimmen")
+		include ../layouts/swimming

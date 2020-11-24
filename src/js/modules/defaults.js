@@ -47,8 +47,21 @@ var defaults = {
 		}
 		
 	},
+	
+	toggleModal: (e) => {
+		
+		let modalName = $(e.currentTarget).data('modal-name');
+		
+		$(e.currentTarget).toggleClass('is-active');
+		
+		$(modalName).toggleClass('is-active');
+		
+	},
+	
 
 	init: () => {
+		
+		$(document).on('click', '.js-modal-btn', defaults.toggleModal);
 
 		$(document).on('click', '.js-scroll-to', defaults.scrollTo);
 		
@@ -57,6 +70,31 @@ var defaults = {
 		$(document).on('click', '.js-select-item, .js-select-close', defaults.selectChange);
 		
 		if ( $('.js-slider-places').length ) {
+			$(document).on('click', '.js-select-item', sliders.tabs);
+		}
+		
+		$(window).on('load scroll', function(){
+			
+			$('.header').each(function(){
+				
+				if( $(window).scrollTop() > 30 ) {
+					
+					$('.header').addClass('is-scroll');
+					
+					if ( $('.header').hasClass('is-fixed') ) {
+						$(this).addClass('is-blue');
+					}
+				} else {
+					$('.header').removeClass('is-scroll');
+					if ( $('.header').hasClass('is-fixed') ) {
+						$(this).removeClass('is-blue');
+					}
+				}
+			});
+			
+		});
+		
+		if ( $('.header').hasClass('is-fixed') ) {
 			$(document).on('click', '.js-select-item', sliders.tabs);
 		}
 

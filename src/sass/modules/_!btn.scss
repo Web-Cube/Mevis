@@ -62,4 +62,8 @@
 			transform: scale(0.97);
 		}
 	}
+	
+	@include max-screen($small_mobile) {
+		font-size: 14px;
+	}
 }

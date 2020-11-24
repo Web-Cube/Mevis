@@ -63,4 +63,10 @@
 			margin-right: 30rem;
 		}
 	}
+	
+	@include max-screen($small_mobile) {
+		&__bottom, &__buttons {
+			
+		}
+	}
 }

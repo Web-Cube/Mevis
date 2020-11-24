@@ -98,3 +98,46 @@
 	text-transform: uppercase;
 	letter-spacing: 2rem;
 }
+
+.large-title {
+	font-size: 118rem;
+	line-height: 136/118*1;
+	letter-spacing: -0.5rem;
+}
+
+.stroke{
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: $blue;
+	color: transparent;
+}
+
+@include max-screen($small_tablet) {
+	.large-title {
+		font-size: 80rem;
+	}
+}
+
+@include max-screen($small_mobile) {
+	.content p,
+	.p,
+	.content li,
+	.li {
+		font-size: 14px;
+	}
+	.h1,
+	.content h1, .large-title {
+		font-size: 42px;
+	}
+	.h2,
+	.content h2 {
+		font-size: 28px;
+	}
+	.h3,
+	.content h3 {
+		font-size: 22px;
+	}
+	.subtitle {
+		letter-spacing: normal;
+		font-size: 16px;
+	}
+}

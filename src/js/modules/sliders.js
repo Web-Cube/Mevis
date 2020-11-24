@@ -34,8 +34,8 @@ var sliders = {
 		smartSpeed: 600,
 		margin: 20,
 		navText: [
-			'<svg class="icon icon-arrowLeft" viewBox="0 0 12 19"><use xlink:href="/app/icons/sprite.svg#arrowLeft"></use></svg>',
-			'<svg class="icon icon-arrowRight" viewBox="0 0 12 19"><use xlink:href="/app/icons/sprite.svg#arrowRight"></use></svg>',
+			'<svg class="icon icon-prev" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#prev"></use></svg>',
+			'<svg class="icon icon-next" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#next"></use></svg>',
 		],
 	},
 
@@ -179,12 +179,40 @@ var sliders = {
 			
 		$(window).on('resize', sliders.resize);
 		
-		$('.js-slider-about').on('changed.owl.carousel', function(event) {
-			var item = event.item.index - 2;
-			$('.js-slider-to.is-active').removeClass('is-active')
-			$('.js-slider-to:nth-child(' +item+ ')').addClass('is-active');
+		
+		$('.js-slider-single').each(function(){
+			var main_slider = $('.js-slider-single');
+			var nav_slider = $('.js-slider-nav');
+
+			nav_slider.children().each( function( index ) {
+				$(this).attr( 'data-position', index );
+			});			
+
+			nav_slider.on('initialized.owl.carousel changed.owl.carousel', function(property) {
+				var current = property.item.index;
+				var src = $(property.target).find(".owl-item").eq(current);
+				$(property.target).find('.owl-item.is-current').removeClass('is-current');
+				src.addClass('is-current');
+				
+				main_slider.trigger( 'to.owl.carousel', [current, 500] );
+		
+			}).on('dragged.owl.carousel', function (e) {
+				var carousel = e.relatedTarget;
+				var slideIndex = (carousel.relative(carousel.current()));
+
+				main_slider.trigger('to.owl.carousel', [slideIndex])
+			});
 			
-			console.log(item);
+			main_slider.on('dragged.owl.carousel', function (property) {
+				var current = property.item.index;
+
+				nav_slider.trigger( 'to.owl.carousel', [current, 500] );
+			});
+
+			$(document).on('click', '.js-slider-preview', function() {
+				nav_slider.trigger('to.owl.carousel', $(this).data( 'position' ) );
+				main_slider.trigger('to.owl.carousel', $(this).data( 'position' ) );
+			});
 		});
 	},
 };
