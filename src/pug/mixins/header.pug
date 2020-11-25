@@ -1,0 +1,45 @@
+mixin header()
+	+b.HEADER.header&attributes(attributes)
+		+e.wrap
+			+e.row.flex._justify._vertical
+				+e.column._left.flex._vertical
+					+e.A.logo(href="/main.html")
+						img(src="/app/img/logo.svg")
+					+select('Berlin – Lichtenberg')(class="_transparent")
+						+e.item.is-active.js-select-item(data-value="Berlin – Lichtenberg") Berlin – Lichtenberg
+						+e.item.js-select-item(data-value="Berlin – Tiergarten") Berlin – Tiergarten
+				+e.column._center.flex._vertical._center.js-mobile-menu
+					+e.UL.nav.flex._vertical._center
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Verein
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Kursangebot
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Schwimmbecken
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Bewertungen
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Job
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Galerie
+						+e.LI.nav-item
+							+e.A.nav-link.p18(href="#") Kontakt
+					+e.contact
+						+e.hidden._mobile
+							+select('Berlin – Lichtenberg')(class="_transparent")
+								+e.item.is-active.js-select-item(data-value="Berlin – Lichtenberg") Berlin – Lichtenberg
+								+e.item.js-select-item(data-value="Berlin – Tiergarten") Berlin – Tiergarten
+						+e.hidden._tablet
+							+e.A.tel.p18(href="tel:+4915122262204") + 49 151 222 62 204
+				+e.column._right.flex._vertical._right
+					+select('DE', 'global')(class="_transparent _lang")
+						+e.item.js-select-item(data-value="EN") English (EN)
+						+e.item.is-active.js-select-item(data-value="DE") Deutsch (DE)
+						+e.item.js-select-item(data-value="RU") Русский (RU)
+					+e.A.phone.p18(href="tel:+4915122262204") + 49 151 222 62 204
+					+e.burger.burger__.js-modal-btn(data-modal-name=".js-mobile-menu")
+						+e.text(data-show="MENU", data-hide="CLOSE")
+						+e.btn
+							+e.line
+							+e.line
+							+e.line

@@ -69,11 +69,81 @@ var forms = {
 				if ($input.val() == "") $input.parent().removeClass("is-focus");
 			});
 	},
+	
+	quiz: () => {
+		
+		$('.js-quiz-next').click(function(){
+			
+			$('.js-quiz-input').each(function(){	
+				let arrText = [];
+
+				arrText = $('.js-quiz-input:checked').map(function(currElement, arr) {
+					let length = $('.js-quiz-input:checked').length-1;
+
+					return $(this).val() + '. ';
+				}).get();
+
+				$('.js-quiz-textarea').val( arrText );
+				
+				console.log( arrText );
+
+			});
+			
+			if ( $('.js-quiz-first').is(":visible") ) {
+				
+				let index = $('.js-quiz-radio').closest('.js-quiz-item').index();
+				
+				$('.js-quiz-first').hide();
+				$('.js-quiz-variant:eq(' +index+ ')').fadeIn(500);
+				
+				$('.js-quiz-back').fadeIn(300);
+				
+			} else {
+				$(this).hide();
+				
+				$("html, body").animate({
+					scrollTop: $('#form').offset().top + "px"
+				}, {
+					duration: 1000
+				});
+				return false;
+			}
+			
+		});
+		
+		$('.js-quiz-back').click(function(){
+			
+			if ( $('.js-quiz-variant').is(":visible") ) {
+				
+				$('.js-quiz-variant').hide();
+				$('.js-quiz-first').fadeIn(500);
+				
+				$(this).hide();
+				
+			}
+			
+			if ( $('.js-quiz-next').is(":hidden") ) {
+				$('.js-quiz-next').fadeIn(300);
+			}
+			
+		});
+		
+		
+		$('.js-quiz-input').change(function(){
+			
+			if ( $('.js-quiz-next').is(":hidden") ) {
+				$('.js-quiz-next').fadeIn(300);
+			}
+
+		});
+		
+	},
 
 	init: () => {
 		forms.mask();
 		forms.validate();
 		forms.events();
+		forms.quiz();
 	},
 };
 

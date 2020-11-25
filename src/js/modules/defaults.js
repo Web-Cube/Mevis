@@ -2,7 +2,7 @@ import { sliders } from "./sliders";
 
 var defaults = {
 
-	scrollTo: () => {
+	scrollTo: (e) => {
 		
 		var attrHref = $(e.currentTarget).attr("href");
 		var dataHref = $(e.currentTarget).data("href");

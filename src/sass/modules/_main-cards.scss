@@ -1,0 +1,108 @@
+.main-cards {
+	position: relative;
+	z-index: 15;
+	margin-top: 150rem;
+	&__head {
+		overflow: hidden;
+		position: absolute;
+		height: 200rem;
+		width: 100%;
+		top: 135rem;
+	}
+	&__row {
+		margin: 0 -15rem;
+		position: relative;
+	}
+	
+	&__column {
+		padding: 0 15rem;
+		&_left {
+			width: 66.66%;
+		}
+		&_right {
+			width: 33.33%;
+			max-width: 310rem;
+			position: relative;
+			padding-bottom: 40rem;
+		}
+	}
+	
+	&__large-title {
+		position: absolute;
+		left: 91%;
+		top: 0;
+	}
+	
+	&__list {
+		margin-left: -30rem;
+	}
+	
+	&__item {
+		width: calc( 50% - 30rem );
+		margin-left: 30rem;
+		margin-bottom: 40rem;
+	}
+	
+	&__sidebar {
+		position: sticky;
+		top: 120rem;
+		&-desc {
+			color: #E0E0E0;
+			margin-top: 40rem;
+		}
+		.btn {
+			margin-top: 40rem;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&__head {
+			position: static;
+			margin-bottom: 40px;
+			height: auto;
+		}
+		&__large-title {
+			position: static;
+			text-align: center;
+		}
+		&__column {
+			width: 100%;
+			&_right {
+				max-width: 550px;
+				margin-top: 10px;
+				padding-bottom: 0;
+			}
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		margin-top: 80px;
+		&__list {
+			margin-left: -20rem;
+		}
+		&__item {
+			margin-left: 20rem;
+			width: calc( 50% - 20rem );
+			margin-bottom: 30px;
+		}
+		
+		&__sidebar {
+			&-desc {
+				margin-top: 20px;
+			}
+		}
+	}
+	
+	@include max-screen(500px) {
+		&__head {
+			margin-bottom: 30px;
+		}
+		&__list {
+			margin-left: 0;
+		}
+		&__item {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+}

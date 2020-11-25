@@ -1,5 +1,7 @@
 .swimming {
-	overflow: hidden;
+	&__first-section {
+		overflow: hidden;
+	}
 	&__wrap {
 		padding-top: 120rem;
 	}
@@ -21,15 +23,16 @@
 		}
 		
 		&-content {
+			padding-left: 3rem;
 			h2, h3 {
 				&:not(:last-child) {
 					margin-bottom: 50rem;
 				}
 			}
 			p, li {
+				color: #E0E0E0;
 				&:not(:last-child) {
 					margin-bottom: 23rem;
-					color: $gray;
 				}
 			}
 		}
@@ -79,6 +82,89 @@
 		}
 	}
 	
+	&__features {
+		position: relative;
+		padding-top: 150rem;
+		&-bg {
+			background: url(/img/swimming__bg.jpg) top no-repeat;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 1302rem;
+			background-size: auto 100%;
+		}
+		
+		&-row {
+			margin: 0 -15rem;
+		}
+		
+		&-item {
+			text-align: center;
+			padding: 0 15rem;
+			width: 33.33%;
+		}
+		
+		&-desc {
+			margin-top: 25rem;
+		}
+		
+		&-box {
+			border: 1px solid $blue;
+			border-radius: 20rem;
+			position: relative;
+			padding: 35rem 0 40rem 0;
+			margin-top: 20rem;
+		}
+		
+		&-top {
+			position: absolute;
+			top: -18rem;
+			left: 50%;
+			background: $dark-blue;
+			width: 90rem;
+			margin-left: -45rem;
+		}
+		
+		&-icon {
+			width: 50rem;
+			height: 50rem;
+			fill: $orange;
+			position: relative;
+			margin: auto;
+		}
+	}
+	
+	&__training {
+		margin-top: 150rem;
+		&-row {
+			margin: 0 -15rem;
+			position: relative;
+		}
+		&-column {
+			width: 50%;
+			padding: 0 15rem;
+		}
+		&-content {
+			h2, h3 {
+				&:not(:last-child) {
+					margin-bottom: 50rem;
+				}
+			}
+			p, li {
+				color: #E0E0E0;
+				&:not(:last-child) {
+					margin-bottom: 23rem;
+				}
+			}
+		}
+		&-title {
+			position: absolute;
+			right: 91%;
+			top: 23rem;
+		}
+	}
+	
 	@include max-screen($small_tablet) {
 		&__wrap {
 			padding-top: 60px;
@@ -87,6 +173,14 @@
 			position: static;
 			text-align: center;
 			margin-bottom: 40px;
+		}
+		
+		&__training {
+			&-title {
+				position: static;
+				text-align: center;
+				margin-bottom: 40px;
+			}
 		}
 	}
 	
@@ -116,6 +210,52 @@
 			&-left {
 				order: 2;
 				margin-top: 30px;
+				padding-right: 0;
+			}
+			&-content {
+				h2, h3 {
+					&:not(:last-child) {
+						margin-bottom: 20px;
+					}
+				}
+				p, li {
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+		&__features {
+			padding-top: 60px;
+			&-item {
+				width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 35px;
+				}
+			}
+			&-desc {
+				max-width: 250px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				strong {
+					font-weight: 500;
+				}
+			}
+			&-box {
+				padding-bottom: 30px;
+			}
+		}
+		&__training {
+			margin-top: 70px;
+			&-title {
+				margin-bottom: 30px;
+			}
+			&-column {
+				width: 100%;
+				&_right {
+					margin-top: 20px;
+				}
 			}
 			&-content {
 				h2, h3 {

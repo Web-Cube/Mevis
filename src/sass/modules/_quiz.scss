@@ -1,0 +1,67 @@
+.quiz {
+	position: relative;
+	padding-top: 110rem;
+	padding-bottom: 150rem;
+	&__bg {
+		position: absolute;
+		top: -180rem;
+		width: 100%;
+		height: 1095rem;
+		background: url(/img/quiz__bg.jpg) top no-repeat;
+		background-size: auto 100%;
+	}
+	
+	&__inside {
+		max-width: 770rem;
+	}
+	
+	&__title {
+		margin-bottom: 65rem;
+	}
+	
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 30rem;
+		}
+	}
+	
+	&__bottom {
+		margin-top: 50rem;
+	}
+	
+	&__back {
+		margin-right: 30rem;
+		display: none;
+	}
+	
+	&__variant {
+		display: none;
+	}
+	
+	@include max-screen($small_tablet) {
+		padding-top: 150rem;
+		&__bg {
+			height: 800rem;
+			top: 0;
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		padding-top: 80px;
+		&__bg {
+			display: none;
+		}
+		&__title {
+			margin-bottom: 35px;
+		}
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+		
+		&__bottom {
+			margin-top: 35px;
+		}
+	}
+}

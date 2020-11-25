@@ -1,0 +1,40 @@
+.radio {
+	display: flex;
+	cursor: pointer;
+	&__input {
+		display: none;
+		
+		&:checked + .radio {
+			&__icon {
+				background: none;
+				border: 6rem solid $orange;
+			}
+		}
+	}
+	
+	&__icon {
+		width: 32rem;
+		min-width: 32rem;
+		height: 32rem;
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 100%;
+		margin-right: 38rem;
+	}
+	
+	@include max-screen($small_mobile) {
+		&__icon {
+			width: 20px;
+			min-width: 20px;
+			height: 20px;
+			margin-right: 16px;
+			transform: translateY(2px);
+		}
+		&__input {
+			&:checked + .radio {
+				&__icon {
+					border-width: 4px;
+				}
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@ append vars
 	- title = 'Главная';
 	
 block header
-	include ../layouts/header_fixed
+	+header(class='is-fixed')
 block content
 	.dark-blue-bg
 		+b.SECTION.main
@@ -22,3 +22,82 @@ block content
 					+e.bottom-text.p Vom Anfänger zum Profi
 			+e.A.arrow.js-scroll-to(href="#schwimmen")
 		include ../layouts/swimming
+		+b.SECTION.main-cards
+			+e.head
+				+e.wrap.wrap
+					+e.H2.large-title.large-title.stroke Siegen
+			+e.wrap.wrap
+				+e.row.flex._justify
+					+e.column._left
+						+e.list.flex
+							+e.item.card__
+								+e.inside
+									+e.top
+										+e.H3.title.h3.color-orange Anfänger
+										+e.desc.p18
+											| Schwimmkurse für Menschen mit Schwimmkenntnissen, die ihre Technik verbessern wollen.
+									+e.center
+										+e.time.p18
+											strong
+												| 8 Trainings 
+												br
+												| à 45 Minuten
+									+e.bottom
+										+btn(class="_border-orange", href="#") More details
+										+e.level.p18 Start
+							+e.item.card__
+								+e.inside
+									+e.top
+										+e.H3.title.h3.color-orange Fortgeschritten
+										+e.desc.p18
+											| Schwimmkurse für Menschen mit Schwimmkenntnissen, die ihre Technik verbessern wollen.
+									+e.center
+										+e.time.p18
+											strong
+												| 8 Trainings 
+												br
+												| à 45 Minuten
+									+e.bottom
+										+btn(class="_border-orange", href="#") More details
+										+e.level.p18 Level 1 - 5
+							+e.item.card__
+								+e.inside
+									+e.top
+										+e.H3.title.h3.color-orange Kraul Kurs
+										+e.desc.p18
+											| Sporttrainings und Triathlon-Vorbereitung. 
+											br
+											| 50 m Bahn.
+									+e.center
+										+e.time.p18
+											strong
+												| 8 Trainings 
+												br
+												| à 45 Minuten
+									+e.bottom
+										+btn(class="_border-orange", href="#") More details
+										+e.level.p18 Level 6 - 12
+							+e.item.card__
+								+e.inside
+									+e.top
+										+e.H3.title.h3.color-orange Einzelunterricht und Mini-Gruppen
+										+e.desc.p18
+											| Besuch nach Vereinbarung. 
+											br
+											| Von ein bis drei Personen.
+									+e.center
+										+e.time.p18
+											strong
+												| 8 Trainings 
+												br
+												| à 45 Minuten
+									+e.bottom
+										+btn(class="_border-orange", href="#") More details
+										+e.level.p18 Kostenlose Lektionen
+					+e.column._right
+						+e.sidebar
+							+e.sidebar-title.h2 Kursangebot
+							+e.sidebar-desc.p18
+								| In unseren Schwimmkursen lernen Sie die gängigsten Schwimmstile: Brustschwimmen, Kraul, Schmetterling, Rückenschwimmen.
+							//- +btn(class="_border-white", href="#") Kurse zeigen
+		include ../layouts/quiz
