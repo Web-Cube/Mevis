@@ -90,6 +90,24 @@
 		z-index: 777;
 	}
 	
+	&__contact, &__phones {
+		&-item {
+			&:not(:first-child) {
+				display: none;
+			}
+		}
+	}
+	
+	&__social {
+		justify-content: center;
+		margin-top: 20rem;
+	}
+	
+	.social__link {
+		width: 32rem;
+		height: 32rem;
+	}
+	
 	@include max-screen(1600px) {
 		&__nav {
 			&-item:not(:last-child) {
@@ -237,6 +255,15 @@
 					display: inline-flex;
 				}
 			}
+		}
+		
+		&__social {
+			margin-top: 12px;
+		}
+		
+		.social__link {
+			width: 24rem;
+			height: 24rem;
 		}
 		
 		&__burger {

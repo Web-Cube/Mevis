@@ -58,6 +58,25 @@ var defaults = {
 		
 	},
 	
+	mobileAccordion: (e) => {
+		
+		let item = $(e.currentTarget).parent();
+			
+		if ( item.hasClass('is-active') ) {
+
+			item.removeClass('is-active');
+			item.find('.js-accordion-body').slideUp(300);
+		} else {
+
+			$('.js-accordion-item.is-active').removeClass('is-active');
+			$('.js-accordion-body:visible').slideUp(300);
+			item.find('.js-accordion-body').slideDown(300);
+			item.addClass('is-active');
+
+		}
+			
+	},
+	
 
 	init: () => {
 		
@@ -94,8 +113,17 @@ var defaults = {
 			
 		});
 		
-		if ( $('.header').hasClass('is-fixed') ) {
-			$(document).on('click', '.js-select-item', sliders.tabs);
+		$(document).on('click', '.js-change-state', function(){
+			
+			let index = $(this).index()+1;
+			
+			$('.js-state:visible').hide();
+			$('.js-state:nth-child('+index+')').fadeIn(300);
+			
+		});
+		
+		if ( $(window).innerWidth() < 580 ) {
+			$(document).on('click', '.js-accordion-head', defaults.mobileAccordion);
 		}
 
 	}

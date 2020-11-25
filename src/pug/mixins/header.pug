@@ -6,8 +6,8 @@ mixin header()
 					+e.A.logo(href="/main.html")
 						img(src="/app/img/logo.svg")
 					+select('Berlin – Lichtenberg')(class="_transparent")
-						+e.item.is-active.js-select-item(data-value="Berlin – Lichtenberg") Berlin – Lichtenberg
-						+e.item.js-select-item(data-value="Berlin – Tiergarten") Berlin – Tiergarten
+						+e.item.is-active.js-select-item.js-change-state(data-value="Berlin – Lichtenberg") Berlin – Lichtenberg
+						+e.item.js-select-item.js-change-state(data-value="Berlin – Tiergarten") Berlin – Tiergarten
 				+e.column._center.flex._vertical._center.js-mobile-menu
 					+e.UL.nav.flex._vertical._center
 						+e.LI.nav-item
@@ -27,16 +27,33 @@ mixin header()
 					+e.contact
 						+e.hidden._mobile
 							+select('Berlin – Lichtenberg')(class="_transparent")
-								+e.item.is-active.js-select-item(data-value="Berlin – Lichtenberg") Berlin – Lichtenberg
-								+e.item.js-select-item(data-value="Berlin – Tiergarten") Berlin – Tiergarten
+								+e.item.is-active.js-select-item.js-change-state(data-value="Berlin – Lichtenberg") Berlin – Lichtenberg
+								+e.item.js-select-item.js-change-state(data-value="Berlin – Tiergarten") Berlin – Tiergarten
 						+e.hidden._tablet
-							+e.A.tel.p18(href="tel:+4915122262204") + 49 151 222 62 204
+							+e.phones
+								+e.phones-item.js-state
+									+e.A.tel.p18(href="tel:+4915122262204") + 49 151 222 62 204
+								+e.phones-item.js-state
+									+e.A.tel.p18(href="tel:+4935522234777") + 49 355 222 34 777
+							+e.social.social__
+								+e.A.link(href="#")
+									+icon('facebook')
+								+e.A.link(href="#")
+									+icon('instagram')
+								+e.A.link(href="#")
+									+icon('twitter')
+								+e.A.link(href="#")
+									+icon('youtube')
 				+e.column._right.flex._vertical._right
 					+select('DE', 'global')(class="_transparent _lang")
 						+e.item.js-select-item(data-value="EN") English (EN)
 						+e.item.is-active.js-select-item(data-value="DE") Deutsch (DE)
 						+e.item.js-select-item(data-value="RU") Русский (RU)
-					+e.A.phone.p18(href="tel:+4915122262204") + 49 151 222 62 204
+					+e.contact
+						+e.contact-item.js-state
+							+e.A.phone.p18(href="tel:+4915122262204") + 49 151 222 62 204
+						+e.contact-item.js-state
+							+e.A.phone.p18(href="tel:+4935522234777") + 49 355 222 34 777
 					+e.burger.burger__.js-modal-btn(data-modal-name=".js-mobile-menu")
 						+e.text(data-show="MENU", data-hide="CLOSE")
 						+e.btn

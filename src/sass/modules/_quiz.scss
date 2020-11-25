@@ -1,5 +1,6 @@
 .quiz {
 	position: relative;
+	z-index: 10;
 	padding-top: 110rem;
 	&__bg {
 		position: absolute;

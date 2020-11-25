@@ -1,0 +1,15 @@
+.social {
+	display: flex;
+	&__link {
+		width: 24rem;
+		height: 24rem;
+		fill: $blue;
+		transition: ease .2s;
+		&:hover {
+			fill: #fff;
+		}
+		&:not(:last-child) {
+			margin-right: 22rem;
+		}
+	}
+}
