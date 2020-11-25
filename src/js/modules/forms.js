@@ -37,7 +37,7 @@ var forms = {
 				},
 				submitHandler: (form) => {
 					var data = $(form).serialize();
-
+					thank();
 					$.ajax({
 						type: "POST",
 						url: $(form).attr("action"),
@@ -55,6 +55,29 @@ var forms = {
 				},
 			});
 		});
+		
+		function thank() {
+			$.magnificPopup.open({
+				tClose: 'Закрыть',
+				removalDelay: 600,
+				fixedContentPos: true,
+				fixedBgPos: true,
+				overflowY: 'hidden',			
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-closeSmall" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#closeSmall"></use></svg></div>',
+				mainClass: 'css-modal-animate',			
+				items: {
+					src: '#thank',
+					type: 'inline'
+				},
+				callbacks: {
+					beforeOpen: () => {
+					},
+
+					beforeClose: () => {
+					}
+				}
+			}, 0);
+		}
 	},
 
 	events: () => {
@@ -80,10 +103,14 @@ var forms = {
 				arrText = $('.js-quiz-input:checked').map(function(currElement, arr) {
 					let length = $('.js-quiz-input:checked').length-1;
 
-					return $(this).val() + '. ';
+					if ( currElement == length ) {
+						return $(this).val() + '.';
+					} else {
+						return $(this).val() + '; ';
+					}
 				}).get();
 
-				$('.js-quiz-textarea').val( arrText );
+				$('.js-quiz-textarea').val( arrText.join("") );
 				
 				console.log( arrText );
 
@@ -102,7 +129,7 @@ var forms = {
 				$(this).hide();
 				
 				$("html, body").animate({
-					scrollTop: $('#form').offset().top + "px"
+					scrollTop: $('#form').offset().top - 100 + "px"
 				}, {
 					duration: 1000
 				});
@@ -140,7 +167,7 @@ var forms = {
 	},
 
 	init: () => {
-		forms.mask();
+		//forms.mask();
 		forms.validate();
 		forms.events();
 		forms.quiz();

@@ -64,6 +64,47 @@
 			height: 320px;
 		}
 	}
+	
+	&-thank {
+		width: 100%;
+		max-width: 490rem;
+		border-radius: 20rem;
+		overflow: hidden;
+		position: relative;
+		margin: auto;
+		background: $dark-blue;
+		border: 1px solid rgba(0, 87, 146, 0.2);
+		text-align: center;
+		
+		&__body {
+			background: url(/img/thank__bg.svg) 0 0 no-repeat;
+			background-size: 100% auto;
+			padding: 50rem 20rem 40rem 20rem;
+			color: #fff;
+		}
+		&__icon {
+			width: 134rem;
+			height: 134rem;
+			fill: $orange;
+			margin: 0 auto 7rem auto;
+		}
+		
+		&__desc {
+			margin-top: 35rem;
+			color: $gray;
+		}
+		
+		&__bottom {
+			padding: 35rem 0;
+			background: #fff;
+		}
+	}
+}
+
+.modals-center {
+	transform: translateY(25rem);
+	opacity: 0;
+	transition: ease .3s;
 }
 
 img.mfp-img {
@@ -88,8 +129,9 @@ img.mfp-img {
 			transform: translate(25rem, 0);
 		}
 
-		&_center{
-			transform: translate(0rem, 25rem);
+		&_center {
+			transform: translateY(25rem);
+			opacity: 0;
 		}
 	}
 
@@ -103,19 +145,9 @@ img.mfp-img {
 			opacity: 1;
 		}
 		
-		.modals-right {
-			transform: translateX(0);
-			opacity: 1;
-		}
-		
-		.modals-apartment {
+		.modals-center {
 			opacity: 1;
 			transform: translateY(0);
-			transition-delay: .2s;
-		}
-		
-		.modals-form {
-			transform: translateX(0);
 		}
 	}
 
@@ -135,16 +167,9 @@ img.mfp-img {
 				transform: translate(0rem, 25rem);
 			}
 		}
-		.modals-right {
-			transform: translateX(100%);
-			opacity: 0;
-		}
-		.modals-apartment {
+		.modals-center {
 			opacity: 0;
 			transform: translateY(-30px);
-		}
-		.modals-form {
-			transform: translateX(100%);
 		}
 	}
 

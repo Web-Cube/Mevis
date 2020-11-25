@@ -1,0 +1,88 @@
+.form {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(0, 87, 146, 0.2);
+	filter: drop-shadow(0px 25rem 50rem rgba(0, 0, 0, 0.25));
+	border-radius: 20rem;
+	background: linear-gradient(89.42deg, #00204A 0.98%, #012556 99.99%);
+	box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+	padding-top: 40rem;
+	padding-bottom: 40rem;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		min-width: 1170rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background: url(/img/quiz-form__bg.svg) top no-repeat;
+	}
+	&_big {
+		padding-left: 70rem;
+		padding-right: 70rem;
+	}
+	&__inside {
+		position: relative;
+	}
+	
+	&__row {
+		margin: 0 -16rem;
+	}
+	&__column {
+		padding: 0 16rem;
+		&_col3 {
+			width: 33.33%;
+		}
+		&_col2 {
+			width: 50%;
+		}
+		&_big {
+			width: 100%;
+		}
+	}
+	&__field, &__select {
+		margin-bottom: 32rem;
+	}
+	
+	&__title {
+		margin-bottom: 40rem;
+		text-align: center;
+	}
+	
+	&__bottom {
+		margin-top: 35rem;
+	}
+	
+	@include max-screen($small_tablet) {
+		&_big {
+			padding-left: 45rem;
+			padding-right: 45rem;
+		}
+		
+		&__row {
+			margin: 0 -12rem;
+		}
+		&__column {
+			padding: 0 12rem;
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		padding-left: 20px;
+		padding-right: 20px;
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__column {
+			width: 100%!important;
+		}
+		
+		&__field, &__select {
+			margin-bottom: 20px;
+		}
+	}
+}

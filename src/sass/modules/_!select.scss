@@ -26,6 +26,27 @@
 			}
 		}
 	}
+	&_border {
+		.select__head {
+			background: #fff;
+			border: 1px solid #EBEBEB;
+			color: #2D3748;
+			&:hover {
+				background: $gray;
+			}
+		}
+		.select__arrow {
+			fill: $dark-blue;
+		}
+		
+		&.is-active {
+			.select__head {
+				background: #fff;
+				filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1)), drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.05));
+				border-color: transparent;
+			}
+		}
+	}
 	&_lang {
 		.select__head {
 			padding: 0 30rem 0 0;

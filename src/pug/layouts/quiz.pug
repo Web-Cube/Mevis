@@ -209,4 +209,30 @@
 					+btn(class="_border-white") Zurück
 				+e.next.js-quiz-next
 					+btn(class="_border-orange", data-href="#form") Vonstatten
-		
+		+e.FORM.form.form__._big#form(action="/app/mail")
+			+e.inside
+				+e.title.h3 Hinterlasse eine Anfrage
+				+e.row.flex
+					+e.column._col3
+						+field(type="text", placeholder="Ihr Nachname", name="name", required)
+					+e.column._col3
+						+field(type="number", placeholder="Ihre Telefon", name="phone", pattern="[0-9]*", inputmode="numeric", required)
+					+e.column._col3
+						+select('Unterrichtszeit auswählen')(class="_border")
+							+e.item.js-select-item(data-value="Unterrichtszeit auswählen") Unterrichtszeit auswählen
+							+e.item.is-active.js-select-item(data-value="Будни 7:00 - 10:00") Будни 7:00 - 10:00
+							+e.item.js-select-item(data-value="Будни 18:00 - 21:00") Будни 18:00 - 21:00
+							+e.item.js-select-item(data-value="Выходные") Выходные
+					+e.column._big
+						+e.field.field__
+							+e.TEXTAREA.textarea.js-quiz-textarea(name="mess", placeholder="Комментарий")
+				+e.LABEL.checkbox.checkbox__
+					+e.INPUT.input(type="checkbox", name="accept", checked, required)
+					+e.icon
+						+icon('check')
+					+e.text.p16
+						| Ich bin mit der Verarbeitung 
+						a(href="#") personenbezogener Daten 
+						| einverstanden
+				+e.bottom.flex._center
+					+btn('submit')(class="_orange") Beantragen

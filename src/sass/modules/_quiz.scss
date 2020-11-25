@@ -1,7 +1,6 @@
 .quiz {
 	position: relative;
 	padding-top: 110rem;
-	padding-bottom: 150rem;
 	&__bg {
 		position: absolute;
 		top: -180rem;
@@ -38,6 +37,10 @@
 		display: none;
 	}
 	
+	&__form {
+		margin-top: 120rem;
+	}
+	
 	@include max-screen($small_tablet) {
 		padding-top: 150rem;
 		&__bg {
@@ -61,7 +64,12 @@
 		}
 		
 		&__bottom {
-			margin-top: 35px;
+			margin-top: 30px;
+			margin-left: 36px;
+		}
+		
+		&__form {
+			margin-top: 60px;
 		}
 	}
 }
