@@ -1,6 +1,16 @@
 .owl {
 	&-nav {
 		display: flex;
+		&.is-dark {
+			.owl {
+				&-prev, &-next {
+					fill: $black;
+					&:hover {
+						background: rgba(45, 55, 72, 0.1);
+					}
+				}
+			}
+		}
 	}
 	&-prev, &-next {
 		width: 82rem;
@@ -14,14 +24,13 @@
 		background: none;
 		border: 0;
 		cursor: pointer;
-		background: rgba(255, 255, 255, 0.07);
 		svg {
 			width: 34rem;
 			height: 34rem;
 		}
 		
 		&:hover {
-			background: rgba(255, 255, 255, 0.2);
+			background: rgba(255, 255, 255, 0.1);
 		}
 	}
 	
@@ -71,14 +80,34 @@
 		}
 	}
 	
+	&-counter {
+		text-align: center;
+		font-size: 16px;
+		&-current {
+			font-size: 24px;
+			font-weight: 500;
+			margin-right: 2px;
+		}
+	}
+	
 	@include max-screen($large_mobile) {
 		&-prev, &-next {
 			width: 56px;
 			height: 46px;
 			border-radius: 28px;
+			background: rgba(255, 255, 255, 0.1);
 			svg {
 				width: 22px;
 				height: 22px;
+			}
+		}
+		&-nav {
+			&.is-dark {
+				.owl {
+					&-prev, &-next {
+						background: rgba(45, 55, 72, 0.1);
+					}
+				}
 			}
 		}
 	}

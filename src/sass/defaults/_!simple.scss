@@ -34,7 +34,7 @@ body {
 	position: relative;
 	font-family: 'Ubuntu', sans-serif;
 	background: #fff;
-	color: $dark-blue;
+	color: $black;
 	&.js-lock {
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -42,6 +42,7 @@ body {
 }
 
 .body-wrap {
+	position: relative;
 	font-size: 16rem;
 }
 

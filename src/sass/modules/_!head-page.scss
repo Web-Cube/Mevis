@@ -1,0 +1,19 @@
+.head-page {
+	margin-top: 190rem;
+	&__subtitle, &__date {
+		margin-top: 17rem;
+	}
+	
+	@include max-screen($large_mobile) {
+		margin-top: 140rem;
+		&__subtitle, &__date {
+			margin-top: 10px;
+		}
+		
+		&__title {
+			br {
+				display: none;
+			}
+		}
+	}
+}

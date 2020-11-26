@@ -1,0 +1,119 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Галерея';
+	
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.H1.title.h2 Gallery
+	+b.gallery
+		+e.wrap.wrap
+			+e.list.flex.js-wrapSlider(
+					data-settings=`{
+						"smartSpeed": 500,
+						"items": 2,
+						"autoWidth": true,
+						"center": false,
+						"nav": true,
+						"dots": false,
+						"navContainer": ".js-gallery-nav"
+					}`, data-counter=".js-gallery-counter")
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Die Erwachsenen-Schwimmkurse der SG Mevis Teilnehmerbegrenzung
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview1.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Schwimmintensiver in der Region Berlin
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview2.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Gemeinsame Schulungen russischer und belarussischer Trainer
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview3.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Die Erwachsenen-Schwimmkurse der SG Mevis Teilnehmerbegrenzung
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview1.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Schwimmintensiver in der Region Berlin
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview2.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Gemeinsame Schulungen russischer und belarussischer Trainer
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview3.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Die Erwachsenen-Schwimmkurse der SG Mevis Teilnehmerbegrenzung
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview1.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Schwimmintensiver in der Region Berlin
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview2.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Gemeinsame Schulungen russischer und belarussischer Trainer
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview3.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Die Erwachsenen-Schwimmkurse der SG Mevis Teilnehmerbegrenzung
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview1.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Schwimmintensiver in der Region Berlin
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview2.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+				+e.A.item._border(href="#")
+					+e.info
+						+e.item-title.p
+							| Gemeinsame Schulungen russischer und belarussischer Trainer
+					+e.preview
+						+e.IMG.preview-img.object-fit(src="/img/preview3.jpg")
+						+e.date.p.color-orange 12/11/2020
+						+e.cat.p.color-orange Aussehen
+			+e.counter.js-gallery-counter
+			+e.nav.is-dark.js-gallery-nav.owl-nav

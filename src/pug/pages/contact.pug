@@ -1,0 +1,85 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Контакты';
+	
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.H1.title.h2 Kontakt
+			+e.subtitle.subtitle.color-orange schreiben Sie uns
+	+b.contact
+		+e.wrap.wrap
+			+e.states
+				+e.state.js-state
+					+e.list.flex
+						+e.item.flex._vertical
+							+e.A.link(href="mailto:info@sg-mevis.de")
+								+e.link-icon
+									+icon('email')
+								+e.link-text.p info@sg-mevis.de
+						+e.item.flex._vertical._center
+							+e.A.link(href="tel:+4915122262204")
+								+e.link-icon
+									+icon('mobile')
+								+e.link-text.p + 49 151 222 62 204
+						+e.item.flex._vertical._right
+							+e.link
+								+e.link-icon
+									+icon('clock')
+								+e.link-text.p Mo.- Fr. 13:00 - 16:00 Uhr
+				+e.state.js-state
+					+e.list.flex
+						+e.item.flex._vertical
+							+e.A.link(href="mailto:info@sg-mevis.de")
+								+e.link-icon
+									+icon('email')
+								+e.link-text.p info@sg-mevis.de
+						+e.item.flex._vertical._center
+							+e.A.link(href="tel:+4935522234777")
+								+e.link-icon
+									+icon('mobile')
+								+e.link-text.p + 49 355 222 34 777
+						+e.item.flex._vertical._right
+							+e.link
+								+e.link-icon
+									+icon('clock')
+								+e.link-text.p  Mo.- Fr. 11:00 - 18:00 Uhr
+		+e.maps
+			+e.maps-top
+				+e.maps-wrap.wrap
+					+e.FORM.form.form__._small(action="/app/mail")
+						+e.inside
+							+e.title.h3 Kontaktformular
+							+e.row.flex
+								+e.column._col2
+									+field(type="text", placeholder="Ihr Nachname", name="name", required)
+								+e.column._col2
+									+field(type="number", placeholder="Ihre Telefon", name="phone", pattern="[0-9]*", inputmode="numeric", required)
+								+e.column._col2
+									+field(type="email", placeholder="E-mail", name="email")
+								+e.column._col2
+									+select('Wählen Kursorte')(class="_border")
+										+e.item.is-active.js-select-item(data-value="Fortgeschritten") Wählen Kursorte
+										+e.item.js-select-item(data-value="Fortgeschritten") Fortgeschritten
+										+e.item.js-select-item(data-value="Mini-Gruppen") Mini-Gruppen
+										+e.item.js-select-item(data-value="Anfänger") Anfänger
+										+e.item.js-select-item(data-value="Kraul Kurs") Kraul Kurs
+								+e.column._big
+									+e.field.field__
+										+e.TEXTAREA.textarea.js-quiz-textarea(name="mess", placeholder="Ihre Anfrage / Ihre Mitteilung")
+							+e.LABEL.checkbox.checkbox__
+								+e.INPUT.input(type="checkbox", name="accept", checked, required)
+								+e.icon
+									+icon('check')
+								+e.text.p16
+									| Ich bin mit der Verarbeitung 
+									a(href="#") personenbezogener Daten 
+									| einverstanden
+							+e.bottom.flex._center
+								+btn('submit')(class="_orange") Beantragen
+			+e.maps-list
+				+e.map.js-state
+					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.148906220943!2d13.4698433161633!3d52.53073997981614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e7e141353cd%3A0xe8a323b013c43ab!2sSchwimmhalle%20Anton-Saefkow-Platz%20-%20Berliner%20B%C3%A4der!5e0!3m2!1sru!2sua!4v1606323052096!5m2!1sru!2sua' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+				+e.map.js-state
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.276413668273!2d13.356740716163273!3d52.52843287981572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85198ee7e54b1%3A0x8246e4556328062!2sStadtbad%20Tiergarten%20-%20Berliner%20B%C3%A4der!5e0!3m2!1sru!2sua!4v1606323589537!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")

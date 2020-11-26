@@ -69,6 +69,43 @@ var modals = {
 		$(document).on('click', '.js-close-modal', modals.close);
 
 		$(document).on('click', '.js-modal', modals.open);
+		
+		$(document).on('click', '.js-gallerybutton', function(e) {
+			e.preventDefault()
+			let next = $(this).hasClass('js-gallerybutton-right') ? 1 : 0;
+			var magnificPopup = $.magnificPopup.instance;
+
+			console.log('gallery: ' + next)
+			
+			if(next)
+				magnificPopup.next(); // go to next item
+			else
+				magnificPopup.prev();			
+		});
+		
+		$('.js-gallery').each(function() {
+			$(this).magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				tClose: 'Закрыть',
+				removalDelay: 600,
+				fixedContentPos: false,
+				closeOnContentClick: false,
+				fixedBgPos: true,
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-closeSmall" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#closeSmall"></use></svg></div>',
+				mainClass: 'css-modal-animate',
+				image: {
+					verticalFit: true
+				},
+				gallery: {
+				    arrowMarkup: '<div class="modals__arrow modals__arrow_%dir% js-gallerybutton js-gallerybutton-%dir%"></div>',		
+					enabled: true,
+					navigateByImgClick: true
+				}
+
+
+			});			
+		});
 
 	}
 

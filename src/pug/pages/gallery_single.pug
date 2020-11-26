@@ -1,0 +1,62 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Галерея - внутренняя';
+	
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.H1.title.h2 Gemeinsame Schulungen russischer 
+				br
+				| und belarussischer Trainer
+			+e.subtitle.subtitle.color-orange 01/09/2020
+	+b.gallery
+		+e.wrap.wrap
+			+e.list.flex.js-gallery.js-wrapSlider(
+					data-settings=`{
+						"smartSpeed": 500,
+						"items": 2,
+						"autoWidth": true,
+						"center": false,
+						"nav": true,
+						"dots": false,
+						"navContainer": ".js-gallery-nav"
+					}`, data-counter=".js-gallery-counter")
+				+e.A.item(href="/app/img/preview1.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview1.jpg")
+				+e.A.item(href="/app/img/preview2.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview2.jpg")
+				+e.A.item(href="/app/img/preview3.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview3.jpg")
+				+e.A.item(href="/app/img/preview1.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview1.jpg")
+				+e.A.item(href="/app/img/preview2.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview2.jpg")
+				+e.A.item(href="/app/img/preview3.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview3.jpg")
+				+e.A.item(href="/app/img/preview1.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview1.jpg")
+				+e.A.item(href="/app/img/preview2.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview2.jpg")
+				+e.A.item(href="/app/img/preview3.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview3.jpg")
+				+e.A.item(href="/app/img/preview1.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview1.jpg")
+				+e.A.item(href="/app/img/preview2.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview2.jpg")
+				+e.A.item(href="/app/img/preview3.jpg")
+					+e.preview
+						+e.IMG.preview-img._scale.object-fit(src="/img/preview3.jpg")
+			+e.counter.js-gallery-counter
+			+e.nav.is-dark.js-gallery-nav.owl-nav

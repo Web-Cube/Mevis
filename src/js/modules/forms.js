@@ -50,9 +50,9 @@ var forms = {
 				rules: {
 					phone: {
 						required: true,
-						minlength: 10,
-					},
-				},
+						minlength: 8,
+					}
+				}
 			});
 		});
 		
