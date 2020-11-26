@@ -125,6 +125,20 @@ var defaults = {
 		if ( $(window).innerWidth() < 580 ) {
 			$(document).on('click', '.js-accordion-head', defaults.mobileAccordion);
 		}
+		
+		$('.js-reviews-desc').each(function(){
+			if ( $(this).height() > 110 ) {
+				$(this).addClass('is-hidden');
+				$(this).closest('.js-reviews-parent').find('.js-reviews-right').show();
+			}
+		});
+		
+		$(document).on('click', '.js-reviews-more', function(){
+			
+			$(this).closest('.js-reviews-parent').find('.js-reviews-desc').toggleClass('is-hidden');
+			$(this).toggleClass('is-active');
+			
+		});
 
 	}
 }

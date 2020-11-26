@@ -1,0 +1,109 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Отзывы';
+	
+block content
+	+b.reviews.js-reviews-bg
+		+e.bg
+		+e.wrap.wrap
+			+e.head-page.head-page__
+				+e.row.flex._justify._vertical
+					+e.H1.title.h2 Bewertungen
+					+btn(href="#popup-reviews", class="_border-orange js-modal") Bewertung hinzufügen
+			+e.list
+				+e.item
+					+e.dot
+					+e.box.js-reviews-parent
+						+e.box-title
+							| Es war das Beste in meinem Leben
+						+e.box-desc.p.js-reviews-desc
+							| Im Mittelpunkt unseres Ansatzes stehen die Überwindung von Ängsten und der Erwerb von Selbstvertrauen bei der koordinierten Bewegung im Wasser. Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude nach sich zieht.
+						+e.box-bottom.flex._vertical._justify
+							+e.box-left
+								+e.user
+									+e.user-icon
+										+icon('user')
+									+e.user-name.p
+										strong Philip Guttenberg
+							+e.box-right.js-reviews-right
+								+e.more.js-reviews-more
+									+e.more-text.p(data-show="read more", data-hide="свернуть")
+									+e.more-icon
+										+icon('shortRight')
+				+e.item
+					+e.dot
+					+e.box.js-reviews-parent
+						+e.box-title
+							| Folgen hat, oder einen!
+						+e.box-desc.p.js-reviews-desc
+							| Im Mittelpunkt unseres Ansatzes stehen die Überwindung von Ängsten und der Erwerb von Selbstvertrauen bei der koordinierten Bewegung im Wasser.
+						+e.box-bottom.flex._vertical._justify
+							+e.box-left
+								+e.user
+									+e.user-icon
+										+icon('user')
+									+e.user-name.p
+										strong Mario Hackenholt
+							+e.box-right.js-reviews-right
+								+e.more.js-reviews-more
+									+e.more-text.p(data-show="read more", data-hide="свернуть")
+									+e.more-icon
+										+icon('shortRight')
+				+e.item
+					+e.dot
+					+e.box.js-reviews-parent
+						+e.box-title
+							| Freude nach sich zieht
+						+e.box-desc.p.js-reviews-desc
+							| Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude nach sich zieht.
+						+e.box-bottom.flex._vertical._justify
+							+e.box-left
+								+e.user
+									+e.user-icon
+										+icon('user')
+									+e.user-name.p
+										strong Tim Abendroth
+							+e.box-right.js-reviews-right
+								+e.more.js-reviews-more
+									+e.more-text.p(data-show="read more", data-hide="свернуть")
+									+e.more-icon
+										+icon('shortRight')
+				+e.item
+					+e.dot
+					+e.box.js-reviews-parent
+						+e.box-title
+							| einen Menschen zu tadeln
+						+e.box-desc.p.js-reviews-desc
+							| Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen!
+						+e.box-bottom.flex._vertical._justify
+							+e.box-left
+								+e.user
+									+e.user-icon
+										+icon('user')
+									+e.user-name.p
+										strong Nicola Cronenberg
+							+e.box-right.js-reviews-right
+								+e.more.js-reviews-more
+									+e.more-text.p(data-show="read more", data-hide="свернуть")
+									+e.more-icon
+										+icon('shortRight')
+				+e.item
+					+e.dot
+					+e.box.js-reviews-parent
+						+e.box-title
+							| keine daraus!
+						+e.box-desc.p.js-reviews-desc
+							| wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude nach sichkörperlicher Betätigung, außer um Vorteile daraus nach sich zieht? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher Betätigung, außer um Vorteile daraus zu ziehen!
+						+e.box-bottom.flex._vertical._justify
+							+e.box-left
+								+e.user
+									+e.user-icon
+										+icon('user')
+									+e.user-name.p
+										strong Adalwin Gehrig
+							+e.box-right.js-reviews-right
+								+e.more.js-reviews-more
+									+e.more-text.p(data-show="read more", data-hide="свернуть")
+									+e.more-icon
+										+icon('shortRight')

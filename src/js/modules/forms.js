@@ -51,7 +51,10 @@ var forms = {
 					phone: {
 						required: true,
 						minlength: 8,
-					}
+					},
+					accept: {
+						required: true,
+					},
 				}
 			});
 		});
