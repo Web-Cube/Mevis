@@ -4,6 +4,20 @@
 		margin-top: 17rem;
 	}
 	
+	&__column {
+		width: 50%;
+		&_left {
+			padding-right: 15rem;
+		}
+		&_right {
+			padding-left: 15rem;
+		}
+	}
+	
+	&__desc {
+		padding-top: 15rem;
+	}
+	
 	@include max-screen($large_mobile) {
 		margin-top: 140rem;
 		&__subtitle, &__date {
@@ -14,6 +28,20 @@
 			br {
 				display: none;
 			}
+		}
+		
+		&__column {
+			width: 100%;
+			&_left {
+				padding-right: 0;
+			}
+			&_right {
+				padding-left: 0;
+			}
+		}
+		
+		&__desc {
+			padding-top: 17px;
 		}
 	}
 }

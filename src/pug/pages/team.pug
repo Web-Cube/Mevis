@@ -1,0 +1,209 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Команда';
+	
+block content
+	+b.team
+		+e.wrap.wrap
+			+e.head-page.head-page__
+				+e.row.flex._justify
+					+e.column._left
+						+e.H1.title.h2 Bewertungen
+						+e.subtitle.subtitle.color-orange
+							strong Schwimmtrainern
+					+e.column._right
+						+e.desc.p
+							| Wir sind ein gut ausgebildetes Team von Schwimmtrainern und verfügen über professionelle, moderne Schulungsmethoden.
+			+e.about
+				+e.about-slider.js-slider-single.js-slider.nav-true(
+					data-settings=`{
+						"smartSpeed": 700,
+						"items": 1,
+						"center": false,
+						"nav": false,
+						"dots": false,
+						"responsive": {
+							"0": {
+								"autoHeight": true,
+								"dots": true,
+								"nav": false,
+								"smartSpeed": 500
+							},
+							"580": {
+								"autoHeight": true,
+								"dots": false,
+								"smartSpeed": 500
+							},
+							"769": {
+								"autoHeight": false,
+								"dots": false,
+								"smartSpeed": 700
+							}
+						}
+					}`)
+					+e.about-slide
+						+e.about-row.flex._justify
+							+e.about-left.flex._bottom
+								+e.about-foto
+									img.object-fit(src="/img/team__foto1.jpg")
+							+e.about-right
+								+e.about-content
+									+e.about-head
+										+e.about-preview
+											img.object-fit(src="/img/team__foto1.jpg")
+										+e.about-info
+											+e.about-name.h2 Natallia Levaniuk
+											+e.about-position.p18.color-orange Meister des Sports im Schwimmen
+									+e.about-desc.p
+										| Mehrfacher Medaillengewinner und Gewinner der Schwimmmeisterschaften in Russland und Moskau.
+										br
+										| Abschluss an der RSUFKSMiT, Fachrichtung — Körperkultur, Bachelor (2018). Teilnehmer der V International wissenschaftlichen und praktischen Konferenz «Aktuelle Fragen der Psychologie, Pädagogik und Bildung» (Samara, 2018). Teilnehmer an Seminaren des Moskauer Schwimmverbandes der Sportrichter im Schwimmen (2017, 2018). Autor des Artikels «Veränderungen in der Haltung von Vorschulkindern unter dem Einfluss des Schwimmens.» 
+										br
+										| Coaching-Erfahrung — seit 2014.
+					+e.about-slide
+						+e.about-row.flex._justify
+							+e.about-left.flex._bottom
+								+e.about-foto
+									img.object-fit(src="/img/team__foto2.jpg")
+							+e.about-right
+								+e.about-content
+									+e.about-head
+										+e.about-preview
+											img.object-fit(src="/img/team__foto2.jpg")
+										+e.about-info
+											+e.about-name.h2 Sergej Petrov
+											+e.about-position.p18.color-orange Meister des Sports im Schwimmen
+									+e.about-desc.p
+										| Mehrfacher Medaillengewinner und Gewinner der Schwimmmeisterschaften in Russland und Moskau.
+										br
+										| Abschluss an der RSUFKSMiT, Fachrichtung — Körperkultur, Bachelor (2018). Teilnehmer der V International wissenschaftlichen und praktischen Konferenz «Aktuelle Fragen der Psychologie, Pädagogik und Bildung» (Samara, 2018). Teilnehmer an Seminaren des Moskauer Schwimmverbandes der Sportrichter im Schwimmen (2017, 2018). Autor des Artikels «Veränderungen in der Haltung von Vorschulkindern unter dem Einfluss des Schwimmens.» 
+										br
+										| Coaching-Erfahrung — seit 2014.
+					+e.about-slide
+						+e.about-row.flex._justify
+							+e.about-left.flex._bottom
+								+e.about-foto
+									img.object-fit(src="/img/team__foto3.jpg")
+							+e.about-right
+								+e.about-content
+									+e.about-head
+										+e.about-preview
+											img.object-fit(src="/img/team__foto3.jpg")
+										+e.about-info
+											+e.about-name.h2 Elena Zhukova
+											+e.about-position.p18.color-orange Meister des Sports im Schwimmen
+									+e.about-desc.p
+										| Mehrfacher Medaillengewinner und Gewinner der Schwimmmeisterschaften in Russland und Moskau.
+										br
+										| Abschluss an der RSUFKSMiT, Fachrichtung — Körperkultur, Bachelor (2018). Teilnehmer der V International wissenschaftlichen und praktischen Konferenz «Aktuelle Fragen der Psychologie, Pädagogik und Bildung» (Samara, 2018). Teilnehmer an Seminaren des Moskauer Schwimmverbandes der Sportrichter im Schwimmen (2017, 2018). Autor des Artikels «Veränderungen in der Haltung von Vorschulkindern unter dem Einfluss des Schwimmens.» 
+										br
+										| Coaching-Erfahrung — seit 2014.
+					+e.about-slide
+						+e.about-row.flex._justify
+							+e.about-left.flex._bottom
+								+e.about-foto
+									img.object-fit(src="/img/team__foto4.jpg")
+							+e.about-right
+								+e.about-content
+									+e.about-head
+										+e.about-preview
+											img.object-fit(src="/img/team__foto4.jpg")
+										+e.about-info
+											+e.about-name.h2 Anastasia Rozhdestvenskaya
+											+e.about-position.p18.color-orange Meister des Sports im Schwimmen
+									+e.about-desc.p
+										| Mehrfacher Medaillengewinner und Gewinner der Schwimmmeisterschaften in Russland und Moskau.
+										br
+										| Abschluss an der RSUFKSMiT, Fachrichtung — Körperkultur, Bachelor (2018). Teilnehmer der V International wissenschaftlichen und praktischen Konferenz «Aktuelle Fragen der Psychologie, Pädagogik und Bildung» (Samara, 2018). Teilnehmer an Seminaren des Moskauer Schwimmverbandes der Sportrichter im Schwimmen (2017, 2018). Autor des Artikels «Veränderungen in der Haltung von Vorschulkindern unter dem Einfluss des Schwimmens.» 
+										br
+										| Coaching-Erfahrung — seit 2014.
+					+e.about-slide
+						+e.about-row.flex._justify
+							+e.about-left.flex._bottom
+								+e.about-foto
+									img.object-fit(src="/img/team__foto5.jpg")
+							+e.about-right
+								+e.about-content
+									+e.about-head
+										+e.about-preview
+											img.object-fit(src="/img/team__foto5.jpg")
+										+e.about-info
+											+e.about-name.h2 Gregor Ivanov
+											+e.about-position.p18.color-orange Meister des Sports im Schwimmen
+									+e.about-desc.p
+										| Mehrfacher Medaillengewinner und Gewinner der Schwimmmeisterschaften in Russland und Moskau.
+										br
+										| Abschluss an der RSUFKSMiT, Fachrichtung — Körperkultur, Bachelor (2018). Teilnehmer der V International wissenschaftlichen und praktischen Konferenz «Aktuelle Fragen der Psychologie, Pädagogik und Bildung» (Samara, 2018). Teilnehmer an Seminaren des Moskauer Schwimmverbandes der Sportrichter im Schwimmen (2017, 2018). Autor des Artikels «Veränderungen in der Haltung von Vorschulkindern unter dem Einfluss des Schwimmens.» 
+										br
+										| Coaching-Erfahrung — seit 2014.
+					+e.about-slide
+						+e.about-row.flex._justify
+							+e.about-left.flex._bottom
+								+e.about-foto
+									img.object-fit(src="/img/team__foto6.jpg")
+							+e.about-right
+								+e.about-content
+									+e.about-head
+										+e.about-preview
+											img.object-fit(src="/img/team__foto6.jpg")
+										+e.about-info
+											+e.about-name.h2 Stas Solomyanij
+											+e.about-position.p18.color-orange Meister des Sports im Schwimmen
+									+e.about-desc.p
+										| Mehrfacher Medaillengewinner und Gewinner der Schwimmmeisterschaften in Russland und Moskau.
+										br
+										| Abschluss an der RSUFKSMiT, Fachrichtung — Körperkultur, Bachelor (2018). Teilnehmer der V International wissenschaftlichen und praktischen Konferenz «Aktuelle Fragen der Psychologie, Pädagogik und Bildung» (Samara, 2018). Teilnehmer an Seminaren des Moskauer Schwimmverbandes der Sportrichter im Schwimmen (2017, 2018). Autor des Artikels «Veränderungen in der Haltung von Vorschulkindern unter dem Einfluss des Schwimmens.» 
+										br
+										| Coaching-Erfahrung — seit 2014.
+				+e.nav.js-thumbnails-nav.owl-nav
+		+e.thumbnails
+			+e.wrap.wrap
+				+e.thumbnails-slider.js-slider-nav.js-slider(
+					data-settings=`{
+						"smartSpeed": 500,
+						"items": 6,
+						"center": false,
+						"nav": true,
+						"dots": false,
+						"navContainer": ".js-thumbnails-nav",
+						"responsive": {
+							"0": {
+								"autoWidth": true,
+								"margin": 15
+							},
+							"580": {
+								"autoWidth": false,
+								"items": 4,
+								"margin": 20
+							},
+							"769": {
+								"items": 6,
+								"margin": 30
+							}
+						}
+					}`)
+					+e.thumbnails-item.js-slider-preview
+						+e.thumbnails-preview
+							img.object-fit(src="/img/team__foto1.jpg")
+						+e.thumbnails-name Natallia Levaniuk
+					+e.thumbnails-item.js-slider-preview
+						+e.thumbnails-preview
+							img.object-fit(src="/img/team__foto2.jpg")
+						+e.thumbnails-name Sergej Petrov
+					+e.thumbnails-item.js-slider-preview
+						+e.thumbnails-preview
+							img.object-fit(src="/img/team__foto3.jpg")
+						+e.thumbnails-name Elena Zhukova
+					+e.thumbnails-item.js-slider-preview
+						+e.thumbnails-preview
+							img.object-fit(src="/img/team__foto4.jpg")
+						+e.thumbnails-name Anastasia Rozhdestvenskaya
+					+e.thumbnails-item.js-slider-preview
+						+e.thumbnails-preview
+							img.object-fit(src="/img/team__foto5.jpg")
+						+e.thumbnails-name Gregor Ivanov
+					+e.thumbnails-item.js-slider-preview
+						+e.thumbnails-preview
+							img.object-fit(src="/img/team__foto6.jpg")
+						+e.thumbnails-name Stas Solomyanij
