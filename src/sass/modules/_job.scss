@@ -1,0 +1,193 @@
+.job {
+	&-main {
+		background: url(/img/job__bg1.jpg) top no-repeat;
+		background-size: auto 100%;
+		color: #fff;
+		&__wrap {
+			padding-top: 190rem;
+			padding-bottom: 120rem;
+			min-height: 680rem;
+		}
+		
+		&__row {
+			margin: 0 -15rem;
+		}
+		
+		&__column {
+			padding: 0 15rem;
+			width: 50%;
+		}
+		
+		&__img {
+			width: 541rem;
+			position: absolute;
+			left: -30rem;
+			bottom: 0;
+		}
+		
+		&__subtitle {
+			margin-top: 17rem;
+		}
+		
+		&__desc {
+			color: #E0E0E0;
+			margin-top: 60rem;
+		}
+		
+		&__btn {
+			margin-top: 40rem;
+		}
+	}
+	
+	&-center {
+		padding: 95rem 0 70rem 0;
+		
+		&__list {
+			margin-left: -15rem;
+		}
+		
+		&__item {
+			width: calc( 33.33% - 30rem );
+			margin-left: 30rem;
+			text-align: center;
+			padding: 41rem 25rem 20rem 25rem;
+			position: relative;
+			border-radius: 20rem;
+			border: 1px solid $blue;
+		}
+		
+		&__icon {
+			position: absolute;
+			width: 90rem;
+			left: 50%;
+			margin-left: -45rem;
+			top: -25rem;
+			background: #fff;
+			svg {
+				display: block;
+				width: 50rem;
+				height: 50rem;
+				margin: auto;
+				fill: $blue;
+			}
+		}
+	}
+	
+	&-offer {
+		background: $dark-blue url(/img/job__bg2.jpg) top no-repeat;
+		background-size: auto 438rem;
+		min-height: 426rem;
+		color: #fff;
+		padding: 70rem 0 80rem 0;
+		
+		&__list {
+			margin-top: 48rem;
+			max-width: 500rem;
+		}
+		
+		&__item {
+			display: flex;
+			&:not(:last-child) {
+				margin-bottom: 33rem;
+			}
+			
+			&-icon {
+				width: 32rem;
+				min-width: 32rem;
+				height: 32rem;
+				fill: $orange;
+				margin-right: 17rem;
+			}
+			
+			&-text {
+				color: #E0E0E0;
+			}
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&-main {
+			&__img {
+				left: -50rem;
+			}
+			
+			&__wrap {
+				padding-top: 170rem;
+				padding-bottom: 100rem;
+			}
+		}
+		
+		&-center {
+			&__list {
+				margin-left: -20rem;
+			}
+			&__item {
+				width: calc( 33.33% - 20rem );
+				margin-left: 20rem;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			&__desc {
+				font-size: 14px;
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		&-main {
+			&__column {
+				width: 100%;
+				&_left {
+					display: none;
+				}
+			}
+			
+			&__wrap {
+				padding-top: 150rem;
+				min-height: inherit;
+				padding-bottom: 80rem;
+			}
+		}
+		
+		&-center {
+			
+			padding-top: 85rem;
+			&__list {
+				margin-left: 0;
+			}
+			
+			&__item {
+				margin-left: 0;
+				width: 100%;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-bottom: 22px;
+				&:not(:last-child) {
+					margin-bottom: 40px;
+				}
+			}
+			
+			&__desc {
+				font-size: 15px;
+			}
+		}
+		
+		&-offer {
+			padding-bottom: 70rem;
+			min-height: inherit;
+			background-size: auto 360rem!important;
+			&__item {
+				&-icon {
+					width: 24rem;
+					height: 24rem;
+					min-width: 24rem;
+					margin-right: 12px;
+				}
+			}
+		}
+	}
+}
