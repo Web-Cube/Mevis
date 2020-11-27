@@ -1,0 +1,80 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Басейны';
+	
+block content
+	+b.places
+		+e.wrap.wrap
+			+e.head-page.head-page__
+				+e.row.flex._justify
+					+e.column._left
+						+e.H1.title.h2 Schwimmbecken
+						+e.subtitle.subtitle.color-orange
+							strong UNSERE KURSORTE
+					+e.column._right
+						+e.desc.p
+							| Die Schwimmkurse der SG MEVIS werden zur Zeit in Berlin in folgenden Schwimmhallen durchgeführt
+		+e.slider-container
+			+e.slider.js-slider-places.js-slider(
+				data-settings=`{
+					"smartSpeed": 700,
+					"items": 1,
+					"center": false,
+					"nav": true,
+					"dots": false,
+					"navContainer": ".js-places-nav",
+					"responsive": {
+						"0": {
+							"autoHeight": true,
+							"dots": true,
+							"nav": false,
+							"smartSpeed": 500
+						},
+						"580": {
+							"autoHeight": true,
+							"dots": false,
+							"smartSpeed": 500
+						},
+						"769": {
+							"autoHeight": false,
+							"dots": false,
+							"smartSpeed": 700
+						}
+					}
+				}`)
+				+e.slide
+					+e.slider-wrap.wrap
+						+e.row.flex._justify
+							+e.left.flex._right
+								+e.preview
+									img.object-fit(src="/img/preview4.jpg")
+							+e.right
+								+e.head
+									+e.H2.name Lichtenberg
+								+e.adress.p.color-orange
+									strong
+										| Anton-Saefkow-Platz 1, 
+										br
+										| 10369 Berlin - Lichtenberg
+								+e.text.p
+									| Das Schwimmbad Anton-Saefkow-Platz befindet sich im Berliner Bezirk Lichtenberg im Ortsteil Fennpfuhl.
+				+e.slide
+					+e.slider-wrap.wrap
+						+e.row.flex._justify
+							+e.left.flex._right
+								+e.preview
+									img.object-fit(src="/img/preview3.jpg")
+							+e.right
+								+e.head
+									+e.H2.name Tiergarten
+								+e.adress.p.color-orange
+									strong
+										| Seydlitzstr. 7, 10557 Berlin
+										br
+										| 10557 Berlin - Tiergarten
+								+e.text.p
+									| Das Schwimmbad Tiergarten befindet sich im Berliner Bezirk Lichtenberg im Ortsteil Fennpfuhl.
+			+e.bottom
+				+e.bottom-wrap.wrap
+					+e.nav.is-dark.js-places-nav.owl-nav

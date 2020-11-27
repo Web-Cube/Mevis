@@ -3,6 +3,7 @@
 		background: url(/img/job__bg1.jpg) top no-repeat;
 		background-size: auto 100%;
 		color: #fff;
+		overflow: hidden;
 		&__wrap {
 			padding-top: 190rem;
 			padding-bottom: 120rem;
@@ -25,6 +26,10 @@
 			bottom: 0;
 		}
 		
+		&__content {
+			position: relative;
+		}
+		
 		&__subtitle {
 			margin-top: 17rem;
 		}
@@ -36,6 +41,12 @@
 		
 		&__btn {
 			margin-top: 40rem;
+		}
+		
+		&__large-title {
+			position: absolute;
+			left: 93%;
+			bottom: 150rem;
 		}
 	}
 	
@@ -101,6 +112,14 @@
 			
 			&-text {
 				color: #E0E0E0;
+			}
+		}
+	}
+	
+	@include max-screen($small_desktop) {
+		&-main {
+			&__large-title {
+				display: none;
 			}
 		}
 	}

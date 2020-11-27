@@ -1,0 +1,91 @@
+.about {
+	
+	&-main {
+		background: $dark-blue url('/img/about__bg1.jpg') top no-repeat;
+		background-size: auto 820rem;
+		padding: 190rem 0 90rem 0;
+		color: #fff;
+		&__content {
+			padding-left: calc( 50% + 15rem );
+		}
+		
+		&__desc {
+			color: #E0E0E0;
+			margin-top: 47rem;
+			p {
+				&:not(:last-child) {
+					margin-bottom: 23rem;
+				}
+			}
+		}
+		
+		&__subtitle {
+			margin-top: 17rem;
+		}
+		
+		&__list {
+			margin: 130rem -15rem 0 -15rem;
+		}
+		
+		&__item {
+			width: 33.33%;
+			padding: 0 45rem;
+			text-align: center;
+			&-icon {
+				width: 64rem;
+				height: 64rem;
+				margin: auto;
+			}
+			&-text {
+				margin-top: 40rem;
+				line-height: 120%;
+				font-size: 16rem;
+			}
+		}
+	}
+	
+	@include max-screen($large_tablet) {
+		&-main {
+			padding: 170rem 0 90rem 0;
+			&__list {
+				margin-top: 90rem;
+			}
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&-main {
+			background-size: auto 640rem!important;
+			&__content {
+				padding-left: 34%;
+			}
+			&__item {
+				padding: 0 15rem;
+			}
+		}
+	}
+	@include max-screen($large_mobile) {
+		&-main {
+			background-size: auto 820rem!important;
+			padding: 140rem 0 70px 0;
+			&__content {
+				padding-left: 0;
+			}
+			
+			&__list {
+				margin-top: 40px;
+			}
+			&__item {
+				width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 40px;
+				}
+				&-text {
+					line-height: 130%;
+					font-size: 14px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

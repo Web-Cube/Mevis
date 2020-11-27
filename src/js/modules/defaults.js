@@ -88,10 +88,6 @@ var defaults = {
 		
 		$(document).on('click', '.js-select-item, .js-select-close', defaults.selectChange);
 		
-		if ( $('.js-slider-places').length ) {
-			$(document).on('click', '.js-select-item', sliders.tabs);
-		}
-		
 		$(window).on('load scroll', function(){
 			
 			$('.header').each(function(){
@@ -119,6 +115,11 @@ var defaults = {
 			
 			$('.js-state:visible').hide();
 			$('.js-state:nth-child('+index+')').fadeIn(300);
+			
+			if ( $('.js-slider-places').length ) {
+				index = index -1;
+				$('.js-slider-places').trigger( 'to.owl.carousel', [index, 500] );
+			}
 			
 		});
 		

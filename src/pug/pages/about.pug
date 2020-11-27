@@ -1,0 +1,36 @@
+extends ../layouts/base
+
+append vars
+	- title = 'О нас';
+	
+block header
+	+header(class='is-fixed')
+block content
+	+b.about
+		+e.main.about-main__
+			+e.wrap.wrap
+				+e.content
+					+e.H2.title.h2 Verein
+					+e.subtitle.subtitle.color-orange
+						strong UNSER LERNKONZEPT
+					+e.desc.content
+						p
+							| Das Konzept und die Methode von SG MEVIS wurden speziell für Erwachsene entwickelt, daher bieten wir ein umfassendes Programm an, mit dem Erwachsene Schwimmkenntnisse aller Niveaus erwerben können.
+						p
+							| Unserem Konzept gemäß werden beim Erlernen jedes neuen Schwimmstils neue Muskelgruppen eingesetzt und ein neuer Atmungstyp erlernt. Dadurch können alle Muskeln des Körpers maximale Arbeit leisten und der Körpertonus insgesamt wird durch das richtige Atmen und ausgewogene Belastungen erhöht.
+				+e.list.flex
+					+e.item
+						+e.item-icon
+							img(src="/app/img/happy.svg")
+						+e.item-text
+							| Die Entwicklung bzw. Förderung bei den KursteilnehmerInnen der Freude am Wasser und am Schwimmen
+					+e.item
+						+e.item-icon
+							img(src="/app/img/flower.svg")
+						+e.item-text
+							| Körperliches und psychisches Wohlbefinden durch intensive Bewegung im Wasser
+					+e.item
+						+e.item-icon
+							img(src="/app/img/biceps.svg")
+						+e.item-text
+							| Entwickeln von motorischen Grundeigenschaften wie Ausdauer, Schnelligkeit und Koordinationsfähigkeit
