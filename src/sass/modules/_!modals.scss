@@ -53,10 +53,6 @@
 		fill: #fff;
 		border: 0;
 		width: 48rem;
-
-		@include max-screen($large_mobile) {
-			
-		}
 	}
 	img.mfp-img {
 		max-height: 90vh;
@@ -75,6 +71,11 @@
 		right: 5rem;
 		top: 5rem;
 		cursor: pointer;
+		@include max-screen($large_mobile) {
+			width: 50rem;
+			right: 0;
+			top: 0;
+		}
 	}
 	&-video {
 		max-width: 1170rem;

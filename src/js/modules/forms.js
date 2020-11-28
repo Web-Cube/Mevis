@@ -43,18 +43,19 @@ var forms = {
 						url: $(form).attr("action"),
 						data: data,
 						success: function (data) {
-							$(form)[0].reset();
+							//$(form)[0].reset();
 						},
 					});
 				},
 				rules: {
 					phone: {
 						required: true,
-						minlength: 8,
+						minlength: 6,
 					},
 					accept: {
-						required: true,
+						required: true
 					},
+					ignore: "input[name='accept']",
 				}
 			});
 		});

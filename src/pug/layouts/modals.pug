@@ -1,6 +1,83 @@
 +b.modals-video.modals-center.mfp-hide#popup-video
 	iframe
-+b.modals-form.modals-center.mfp-hide#recall
++b.FORM.form._small._modals.modals-center.mfp-hide#popup-form(action="/app/mail")
+	+e.inside
+		+e.title.h3 Kontaktformular
+		+e.row.flex
+			+e.column._col2
+				+field(type="text", placeholder="Ihr Nachname", name="name", required)
+			+e.column._col2
+				+field(type="number", placeholder="Ihre Telefon", name="phone", pattern="[0-9]*", inputmode="numeric", required)
+			+e.column._col2
+				+field(type="email", placeholder="E-mail", name="email")
+			+e.column._col2
+				+select('Wählen Kursorte')(class="_border")
+					+e.item.is-active.js-select-item(data-value="Fortgeschritten") Wählen Kursorte
+					+e.item.js-select-item(data-value="Fortgeschritten") Fortgeschritten
+					+e.item.js-select-item(data-value="Mini-Gruppen") Mini-Gruppen
+					+e.item.js-select-item(data-value="Anfänger") Anfänger
+					+e.item.js-select-item(data-value="Kraul Kurs") Kraul Kurs
+			+e.column._big
+				+e.field.field__
+					+e.TEXTAREA.textarea.js-quiz-textarea(name="mess", placeholder="Ihre Anfrage / Ihre Mitteilung")
+		+e.LABEL.checkbox.checkbox__
+			+e.INPUT.input(type="checkbox", name="accept")
+			+e.icon
+				+icon('check')
+			+e.text.p16
+				| Ich bin mit der Verarbeitung 
+				a(href="#") personenbezogener Daten 
+				| einverstanden
+		+e.bottom.flex._center
+			+btn('submit')(class="_orange") Beantragen
++b.FORM.form._verysmall._modals.modals-center.mfp-hide#popup-job(action="/app/mail")
+	+e.inside
+		+e.title.h3 Отозваться на вакансию
+		+field(type="text", placeholder="Ihr Nachname", name="name", required)
+		+field(type="number", placeholder="Ihre Telefon", name="phone", pattern="[0-9]*", inputmode="numeric", required)
+		+field(type="email", placeholder="E-mail", name="email")
+		+e.field.field__
+			+e.TEXTAREA.textarea.js-quiz-textarea(name="mess", placeholder="Ihre Anfrage / Ihre Mitteilung")
+		+e.LABEL.checkbox.checkbox__
+			+e.INPUT.input(type="checkbox", name="accept")
+			+e.icon
+				+icon('check')
+			+e.text.p16
+				| Ich bin mit der Verarbeitung 
+				a(href="#") personenbezogener Daten 
+				| einverstanden
+		+e.bottom.flex._center
+			+btn('submit')(class="_orange") Beantragen
++b.FORM.form._small._modals.modals-center.mfp-hide#popup-review(action="/app/mail")
+	+e.inside
+		+e.title.h3 Оставить отзыв
+		+e.row.flex
+			+e.column._col2
+				+field(type="text", placeholder="Ihr Nachname", name="name", required)
+			+e.column._col2
+				+field(type="number", placeholder="Ihre Telefon", name="phone", pattern="[0-9]*", inputmode="numeric", required)
+			+e.column._col2
+				+field(type="email", placeholder="E-mail", name="email")
+			+e.column._col2
+				+select('Wählen Kursorte')(class="_border")
+					+e.item.is-active.js-select-item(data-value="Fortgeschritten") Wählen Kursorte
+					+e.item.js-select-item(data-value="Fortgeschritten") Fortgeschritten
+					+e.item.js-select-item(data-value="Mini-Gruppen") Mini-Gruppen
+					+e.item.js-select-item(data-value="Anfänger") Anfänger
+					+e.item.js-select-item(data-value="Kraul Kurs") Kraul Kurs
+			+e.column._big
+				+e.field.field__
+					+e.TEXTAREA.textarea.js-quiz-textarea(name="mess", placeholder="Ihre Anfrage / Ihre Mitteilung")
+		+e.LABEL.checkbox.checkbox__
+			+e.INPUT.input(type="checkbox", name="accept")
+			+e.icon
+				+icon('check')
+			+e.text.p16
+				| Ich bin mit der Verarbeitung 
+				a(href="#") personenbezogener Daten 
+				| einverstanden
+		+e.bottom.flex._center
+			+btn('submit')(class="_orange") Beantragen
 +b.modals-thank.modals-center.mfp-hide#thank
 	+e.body
 		+e.icon
