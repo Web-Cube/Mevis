@@ -6,6 +6,7 @@
 	border-radius: 20rem;
 	position: relative;
 	overflow: hidden;
+	color: #fff;
 	&:before {
 		content: '';
 		display: block;
@@ -43,5 +44,18 @@
 	
 	&__level {
 		margin-top: 30rem;
+	}
+	
+	@include max-screen($small_mobile) {
+		&__top {
+			min-height: 150rem;
+		}
+		&__bottom, &__center {
+			margin-top: 20px;
+		}
+
+		&__level {
+			margin-top: 20px;
+		}
 	}
 }

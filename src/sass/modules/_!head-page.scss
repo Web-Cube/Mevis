@@ -18,8 +18,7 @@
 		padding-top: 15rem;
 	}
 	
-	@include max-screen($large_mobile) {
-		margin-top: 140rem;
+	@include max-screen ($small_tablet) {
 		&__subtitle, &__date {
 			margin-top: 10px;
 		}
@@ -43,5 +42,9 @@
 		&__desc {
 			padding-top: 17px;
 		}
+	}
+	
+	@include max-screen($large_mobile) {
+		margin-top: 140rem;
 	}
 }

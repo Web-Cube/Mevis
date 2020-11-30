@@ -106,6 +106,21 @@ var modals = {
 
 			});			
 		});
+		
+		$('.js-zoom').each(function() {
+			$(this).magnificPopup({
+				tClose: 'Закрыть',
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-closeSmall" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#closeSmall"></use></svg></div>',
+				type: "image",
+				closeOnContentClick: true,
+				closeBtnInside: false,
+				mainClass: 'css-modal-animate',
+				image: {
+					verticalFit: true,
+				}
+
+			});			
+		});
 
 	}
 

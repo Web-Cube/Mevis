@@ -1,0 +1,303 @@
+.programs {
+	&__slider {
+		&-container {
+			position: relative;
+			margin-top: 20rem;
+			margin-left: -15rem;
+			margin-right: -15rem;
+		}
+		
+		.owl-item {
+			padding: 50rem 15rem;
+			overflow: hidden;
+		}
+	}
+	
+	&__item {
+		transition: ease .3s;
+		opacity: .85;
+		width: 100%;
+		cursor: pointer;
+		&.card {
+			box-shadow: none;
+			filter: none;
+		}
+		.card__bottom {
+			margin-top: 40rem;
+		}
+	}
+	
+	&__info {
+		background: #E0E0E0;
+		margin-top: 5rem;
+		&-wrap {
+			padding-top: 60rem;
+			padding-bottom: 90rem;
+		}
+		
+		&-row {
+			margin: 0 -15rem;
+		}
+		
+		&-item {
+			padding: 0 15rem;
+			width: 33.33%;
+		}
+		
+		&-head {
+			display: flex;
+			align-items: center;
+		}
+		
+		&-icon {
+			width: 24rem;
+			min-width: 24rem;
+			margin-right: 11rem;
+			fill: $black;
+		}
+		
+		&-desc {
+			margin-left: 35rem;
+			margin-top: 29rem;
+		}
+		
+		&-slide {
+			.btn {
+				display: none;
+			}
+		}
+	}
+	
+	&__btn {
+		position: absolute;
+		left: 50%;
+		bottom: -23rem;
+		transform: translateX(-50%);
+	}
+	
+	.owl {
+		&-prev, &-next {
+			position: absolute;
+			z-index: 50;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		&-prev {
+			right: 100%;
+			margin-right: 30rem;
+		}
+		
+		&-next {
+			left: 100%;
+			margin-left: 30rem;
+		}
+	}
+	
+	.owl {
+		&-dots {
+			margin-top: 5;
+		}
+
+		&-dot {
+			background: rgba(45, 55, 72, 0.1)!important;
+			&.active {
+				background: rgba(45, 55, 72, 0.5)!important;
+			}
+		}
+	}
+	
+	&__attention {
+		padding: 90rem 0;
+		&-row {
+			display: flex;
+			align-items: center;
+		}
+		&-icon {
+			width: 150rem;
+			height: 150rem;
+			min-width: 150rem;
+			opacity: .1;
+			fill: #2E3A59;
+		}
+		
+		&-text {
+			width: 100%;
+			max-width: 970rem;
+			transform: translateX(-50rem);
+			position: relative;
+		}
+	}
+	
+	@include max-screen(1367px) {
+		.owl {
+			&-prev {
+				margin-right: 15rem;
+			}
+			&-next {
+				margin-left: 15rem;
+			}
+		}
+	}
+	
+	@include max-screen($small_desktop) {
+		.owl {
+			&-prev {
+				margin-right: 30rem;
+			}
+			&-next {
+				margin-left: 30rem;
+			}
+		}
+	}
+	
+	@include max-screen($large_tablet) {
+		
+		&__nav {
+			margin-top: -20rem;
+			margin-left: 12rem;
+			margin-bottom: 25rem;
+		}
+		
+		.owl {
+			&-prev, &-next {
+				position: static;
+				transform: translateY(0);
+				background: rgba(45, 55, 72, 0.1)!important;
+			}
+			&-next {
+				margin-left: 0;
+			}
+		}
+		
+		&__info {
+			&-wrap {
+				padding-bottom: 80rem;
+			}
+		}
+		
+		&__attention {
+			&-row {
+				margin-left: -15rem;
+			}
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&__slider {
+			&-container {
+				margin-top: 0;
+			}
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		&__slider {
+			&-container {
+				margin-right: -15px;
+				margin-top: -10px;
+				margin-right: -15px;
+			}
+			
+			.owl-item {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+		&__nav {
+			justify-content: space-between;
+			margin-top: -28px;
+			margin-left: 0;
+			padding: 0 15px;
+		}
+		
+		&__info {
+			&-wrap {
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			&-item {
+				width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+			&-desc {
+				margin-top: 10px;
+				margin-left: 31rem;
+			}
+			&-icon {
+				width: 0rem;
+				height: 20rem;
+				min-width: 20rem;
+			}
+			
+			&-slide {
+				.btn {
+					display: inline-flex;
+				}
+			}
+		}
+		
+		&__btn {
+			position: static;
+			transform: none;
+			margin-left: 31rem;
+			margin-top: 25px;
+			display: none;
+		}
+		
+		&__attention {
+			padding: 30px 0 40px 0;
+			&-row {
+				margin-left: 0;
+				flex-wrap: wrap;
+			}
+			&-icon {
+				width: 80px;
+				min-width: 80px;
+				height: 80px;
+				margin-left: -10px;
+				margin-bottom: 10px;
+			}
+			&-text {
+				transform: none;
+			}
+		}
+	}
+	
+	
+	@include max-screen($small_mobile) {
+		&__item {
+			.card__bottom {
+				margin-top: 30rem;
+			}
+		}
+	}
+	
+	
+}
+
+.active {
+	.programs__item.card {
+		box-shadow: 1px 6rem 10rem rgba(0, 0, 0, 0.3);
+		filter: drop-shadow(1px 6rem 10rem rgba(0, 0, 0, 0.3));
+		opacity: 1;
+	}
+	
+	& + .active {
+		.programs__item.card {
+			box-shadow: none;
+			filter: none;
+			opacity: .85;
+		}
+		
+		& + .active {
+			.programs__item.card {
+				box-shadow: none;
+				filter: none;
+				opacity: .85;
+			}
+		}
+	}
+}

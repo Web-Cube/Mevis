@@ -1,0 +1,262 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Программы';
+	
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex._justify
+				+e.column._left
+					+e.H1.title.h2 Schwimmkursangebot
+					+e.subtitle.subtitle.color-orange
+						strong UNSERE KURSORTE
+				+e.column._right
+					+e.desc.p
+						| In unseren Schwimmkursen lernen Sie die gängigsten Schwimmstile: Brustschwimmen, Kraul, Schmetterling, Rückenschwimmen.
+	+b.programs
+		+e.wrap.wrap
+			+e.slider-container
+				+e.slider.js-slider-nav.js-slider(
+					data-settings=`{
+						"smartSpeed": 500,
+						"items": 3,
+						"center": false,
+						"nav": true,
+						"dots": false,
+						"margin": 0,
+						"navContainer": ".js-programs-nav",
+						"responsive": {
+							"0": {
+								"dots": true,
+								"nav": false,
+								"items": 1,
+								"margin": 0
+							},
+							"580": {
+								"dots": false,
+								"margin": 0,
+								"items": 2,
+								"autoWidth": false
+							},
+							"769": {
+								"dots": false,
+								"items": 3,
+								"margin": 0,
+								"autoWidth": false
+							}
+						}
+					}`)
+					+e.item.card__.js-slider-preview
+						+e.inside
+							+e.top
+								+e.H3.title.h3.color-orange Anfänger
+								+e.desc.p18
+									| Schwimmkurse für Anfänger. 
+									br
+									| Lerne in kurzer Zeit richtig zu schwimmen
+							+e.center
+								+e.time.p18
+									strong
+										| 8 Trainings 
+										br
+										| à 60 Minuten
+							+e.bottom
+								+e.level.p18 Start
+					+e.item.card__.js-slider-preview
+						+e.inside
+							+e.top
+								+e.H3.title.h3.color-orange Fortgeschritten
+								+e.desc.p18
+									| Schwimmkurse für Menschen mit Schwimmkenntnissen, die ihre Technik verbessern wollen.
+							+e.center
+								+e.time.p18
+									strong
+										| 8 Trainings 
+										br
+										| à 45 Minuten
+							+e.bottom
+								+e.level.p18 Level 1 - 5
+					+e.item.card__.js-slider-preview
+						+e.inside
+							+e.top
+								+e.H3.title.h3.color-orange Kraul Kurs
+								+e.desc.p18
+									| Sporttrainings und Triathlon-Vorbereitung. 
+									br
+									| 50 m Bahn.
+							+e.center
+								+e.time.p18
+									strong
+										| 8 Trainings 
+										br
+										| à 45 Minuten
+							+e.bottom
+								+e.level.p18 Level 6 - 12
+					+e.item.card__.js-slider-preview
+						+e.inside
+							+e.top
+								+e.H3.title.h3.color-orange Einzelunterricht und Mini-Gruppen
+								+e.desc.p18
+									| Besuch nach Vereinbarung. 
+									br
+									| Von ein bis drei Personen.
+							+e.center
+								+e.time.p18
+									strong
+										| 8 Trainings 
+										br
+										| à 45 Minuten
+							+e.bottom
+								+e.level.p18 Kostenlose Lektionen
+				+e.nav.is-dark.js-programs-nav.owl-nav
+		+e.info
+			+e.info-wrap.wrap
+				+e.info-slider.js-slider-single.js-slider(
+					data-settings=`{
+						"smartSpeed": 700,
+						"items": 1,
+						"center": false,
+						"nav": false,
+						"dots": false
+					}`)
+					+e.info-slide
+						+e.info-row.flex
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('calendar')
+									+e.info-title.p
+										strong Zeitraum
+								+e.info-desc.p
+									| 3 - 26 November 
+									br
+									| (03, 05, 10, 12, 17, 19, 24, 26)
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('clock')
+									+e.info-title.p
+										strong Kurszeiten
+								+e.info-desc.p
+									| Dienstag, Donnerstag. 
+									br
+									| 19:00 - 20:00
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('credit')
+									+e.info-title.p
+										strong Preis
+								+e.info-desc.p
+									| 220 € + Eintritt 
+									br
+									| 19:00 - 20:00
+						+btn(class='_orange js-modal', href="#popup-form") Anmelden
+					+e.info-slide
+						+e.info-row.flex
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('calendar')
+									+e.info-title.p
+										strong Zeitraum
+								+e.info-desc.p
+									| 3 - 26 November 
+									br
+									| (03, 05, 10, 12, 17, 19, 24, 26)
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('clock')
+									+e.info-title.p
+										strong Kurszeiten
+								+e.info-desc.p
+									| Dienstag, Donnerstag. 
+									br
+									| 19:00 - 20:00
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('credit')
+									+e.info-title.p
+										strong Preis
+								+e.info-desc.p
+									| 220 € + Eintritt 
+									br
+									| 19:00 - 20:00
+						+btn(class='_orange js-modal', href="#popup-form") Anmelden
+					+e.info-slide
+						+e.info-row.flex
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('credit')
+									+e.info-title.p
+										strong Zeitraum
+								+e.info-desc.p
+									| 3 - 26 November 
+									br
+									| (03, 05, 10, 12, 17, 19, 24, 26)
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('clock')
+									+e.info-title.p
+										strong Kurszeiten
+								+e.info-desc.p
+									| Dienstag, Donnerstag. 
+									br
+									| 19:00 - 20:00
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('credit')
+									+e.info-title.p
+										strong Preis
+								+e.info-desc.p
+									| 220 € + Eintritt 
+									br
+									| 19:00 - 20:00
+						+btn(class='_orange js-modal', href="#popup-form") Anmelden
+					+e.info-slide
+						+e.info-row.flex
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('calendar')
+									+e.info-title.p
+										strong Zeitraum
+								+e.info-desc.p
+									| 3 - 26 November 
+									br
+									| (03, 05, 10, 12, 17, 19, 24, 26)
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('clock')
+									+e.info-title.p
+										strong Kurszeiten
+								+e.info-desc.p
+									| Dienstag, Donnerstag. 
+									br
+									| 19:00 - 20:00
+							+e.info-item
+								+e.info-head
+									+e.info-icon
+										+icon('credit')
+									+e.info-title.p
+										strong Preis
+								+e.info-desc.p
+									| 220 € + Eintritt 
+									br
+									| 19:00 - 20:00
+						+btn(class='_orange js-modal', href="#popup-form") Anmelden
+				+btn(class='_orange js-modal', href="#popup-form") Anmelden
+		+e.attention
+			+e.attention-wrap.wrap
+				+e.attention-row
+					+e.attention-icon
+						+icon('infocircle')
+					+e.attention-text.p
+						| Wegen der Abstands- und Hygieneregeln der Berliner Bäder ist die maximale Anzahl der Teilnehmenden auf max. 6 Personen begrenzt. Unsere Schwimmkurse finden statt, sobald die Mindestteilnehmerzahl von 6 erreicht wird, ansonsten wird der Termin verschoben.

@@ -44,6 +44,136 @@
 		}
 	}
 	
+	&-special {
+		padding-top: 70rem;
+		&__content {
+			p {
+				&:not(:last-child) {
+					margin-bottom: 23rem;
+				}
+			}
+		}
+		
+		&__title {
+			font-size: 118rem;
+			line-height: 1;
+			color: $dark-blue;
+			margin-bottom: 70rem;
+			letter-spacing: -0.5rem;
+		}
+		
+		&__column {
+			width: 50%;
+			&_left {
+				max-width: 485rem;
+				padding-right: 15rem;
+			}
+			&_right {
+				padding-left: 15rem;
+			}
+		}
+		
+		&__preview {
+			width: 845/470*100%;
+			padding-top: 87.3%;
+			position: relative;
+			overflow: hidden;
+			display: block;
+			margin-top: 70rem;
+			margin-left: -79.78723%;
+		}
+	}
+	
+	&-certificate {
+		background: url('/img/about__bg2.jpg') top no-repeat;
+		background-size: auto 100%;
+		color: #fff;
+		&__row {
+			padding: 40rem 100rem;
+			min-height: 380rem;
+			flex-wrap: nowrap;
+		}
+		
+		&__column {
+			&_left {
+				width: 100%;
+				max-width: 570rem;
+			}
+			&_right {
+				width: 212rem;
+				margin-left: 30rem;
+				min-width: 212rem;
+			}
+		}
+		
+		&__preview {
+			display: block;
+			position: relative;
+			overflow: hidden;
+			padding-top: 300/212*100%;
+		}
+		
+		&__desc {
+			max-width: 475rem;
+			margin-top: 30rem;
+		}
+		
+		&__subtitle {
+			margin-top: 50rem;
+		}
+	}
+	
+	&-programs {
+		padding: 100rem 0 70rem 0;
+		background: $dark-blue;
+		color: #fff;
+		
+		&__list {
+			margin-top: 40rem;
+			border-top: 1px solid $orange;
+		}
+		
+		&__item {
+			padding: 40rem 0;
+			border-bottom: 1px solid $orange;
+			&-head {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			&-name {
+				padding-top: 7rem;
+				min-width: 200rem;
+				text-align: right;
+			}
+			
+			&-content {
+				margin-top: 40rem;
+				p, li {
+					color: #E0E0E0;
+				}
+				p {
+					&:not(:last-child) {
+						margin-bottom: 23rem;
+					}
+				}
+			}
+		}
+		
+		&__registration {
+			margin-top: 70rem;
+			background: url(/img/about__bg3.jpg) top no-repeat;
+			background-size: auto 100%;
+			text-align: center;
+			padding: 30rem 0;
+			min-height: 189rem;
+		}
+		
+		&__btn {
+			margin-top: 39rem;
+		}
+	}
+	
 	@include max-screen($large_tablet) {
 		&-main {
 			padding: 170rem 0 90rem 0;
@@ -61,6 +191,44 @@
 			}
 			&__item {
 				padding: 0 15rem;
+			}
+		}
+		
+		&-special {
+			padding-bottom: 70rem;
+			&__title {
+				font-size: 64rem;
+				line-height: 74/64*1;
+				letter-spacing: -1rem;
+				margin-bottom: 40px;
+			}
+			
+			&__preview {
+				width: 100%;
+				margin-left: 0;
+				padding-top: 50%;
+				margin-top: 40px;
+			}
+			
+			&__column {
+				width: 100%;
+				&_left {
+					padding-right: 0;
+					order: 2;
+					max-width: none;
+					margin-top: 23rem;
+				}
+				&_right {
+					padding-left: 0;
+					order: 1;
+				}
+			}
+		}
+		
+		&-certificate {
+			&__row {
+				padding-left: 0;
+				padding-right: 0;
 			}
 		}
 	}
@@ -85,6 +253,71 @@
 					font-size: 14px;
 					margin-top: 20px;
 				}
+			}
+		}
+		
+		&-certificate {
+			padding: 20rem 0 30rem 0;
+			
+			
+			&__row {
+				flex-wrap: wrap;
+			}
+			
+			&__subtitle {
+				margin-top: 30rem;
+			}
+			
+			&__column {
+				&_left {
+					max-width: none;
+				}
+				&_right {
+					margin-left: 0;
+					width: 100%;
+					margin-top: 40rem;
+					max-width: 212px;
+				}
+			}
+		}
+		
+		&-programs {
+			padding-top: 60rem;
+			padding-bottom: 30px;
+			&__item {
+				padding: 27px 0 30px 0;
+				&-content {
+					margin-top: 20px;
+				}
+				&-head {
+					flex-wrap: wrap;
+				}
+				&-title, &-name {
+					width: 100%;
+				}
+				&-name {
+					text-align: left;
+					padding-top: 10px;
+				}
+			}
+			
+			&__btn {
+				margin-top: 27px;
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		
+		
+		&-special {
+			&__title {
+				font-size: 38px;
+				margin-bottom: 30px;
+			}
+			
+			&__preview {
+				margin-top: 30px;
 			}
 		}
 	}
