@@ -1,0 +1,80 @@
+.error404 {
+	color: #fff;
+	min-height: 980rem;
+	position: relative;
+	overflow: hidden;
+	padding: 606rem 0 100rem 0;
+	text-align: center;
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: -100rem;
+		width: 100%;
+		height: 1080rem;
+		background: $dark-blue url('/img/404-mevis.jpg') top no-repeat;
+		background-size: auto 100%;
+	}
+	
+	&__bottom {
+		overflow: hidden;
+		&-text {
+			font-weight: 500;
+			position: relative;
+			
+			&:before, &:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				width: 270rem;
+				height: 1px;
+				background: $orange;
+			}
+			&:before {
+				right: 100%;
+				margin-right: 60rem;
+			}
+			&:after {
+				left: 100%;
+				margin-left: 60rem;
+			}
+		}
+	}
+	
+	&__btn {
+		margin-top: 40rem;
+	}
+	
+	@include max-screen(700px) {
+		min-height: 780rem;
+		padding-top: 476rem;
+		&__bg {
+			height: 880rem;
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		
+		&__bottom {
+			overflow: hidden;
+			&-text {
+				&:before, &:after {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		min-height: 480rem;
+		padding-top: 290rem;
+		padding-bottom: 0;
+		&__bg {
+			height: 600rem;
+		}
+		
+		&__btn {
+			margin-top: 30px;
+		}
+	}
+}

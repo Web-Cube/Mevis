@@ -1,0 +1,14 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Ошибка 404';
+	
+block header
+	+header(class='is-fixed')
+block content
+	+b.error404
+		+e.bg
+		+e.wrap.wrap
+			+e.bottom.flex._center
+				+e.bottom-text.h3 Seite nicht gefunden
+			+btn(class="_border-white", href="/main.html") Startseite
