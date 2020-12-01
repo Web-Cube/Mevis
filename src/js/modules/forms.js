@@ -20,6 +20,8 @@ var forms = {
 			var $form = $(el);
 
 			$form.validate({
+				errorElement: "em",
+				wrapper: 'label',
 				errorPlacement: function (error, element) {
 					//just nothing, empty
 				},
