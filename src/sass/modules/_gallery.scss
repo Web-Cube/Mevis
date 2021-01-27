@@ -35,6 +35,9 @@
 			}
 		}
 	}
+	.owl-item {
+		padding: 0 2px;
+	}
 	
 	&__info {
 		display: flex;
@@ -100,10 +103,9 @@
 		&__list {
 			margin-top: 30px;
 			margin-left: 0;
-			width: calc( 100% + 15px );
 		}
 		&__item {
-			width: 370rem;
+			width: 100%;
 			margin-left: 0;
 			margin-bottom: 0;
 		}

@@ -175,6 +175,9 @@
 	}
 	
 	@include max-screen($large_mobile) {
+		&__bg {
+			background: $dark-blue!important;
+		}
 		&__list {
 			margin-top: 35px;
 			margin-left: 0;
