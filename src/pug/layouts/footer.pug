@@ -1,97 +1,146 @@
 +b.FOOTER.footer
 	+e.wrap.wrap
-		+e.row.flex
-			+e.column._col5
-				+e.A.logo(href="/main.html")
-					img(src="/app/img/logo2.svg")
-				+e.box
-					+e.box-title.p18
-						strong UNSERE ORTE:
-					+e.box-body
-						+e.list
-							+e.item.p16
-								strong Berlin – Lichtenberg 
-								br
-								span.is-gray Schwimmhalle Anton-Saefkow-Platz 1, 10369 Berlin
-							+e.item.p16
-								strong Berlin – Tiergarten 
-								br
-								span.is-gray Stadtbad Tiergarten, Seydlitzstr. 7, 10557 Berlin
-			+e.column._col2
-				+e.box._cat.js-accordion-item
-					+e.box-title._head.p18.js-accordion-head
-						strong Verein
-					+e.box-body._cat.js-accordion-body
-						+e.list
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Reviews
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Job
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Team
-							+e.item.p18
-								+e.A.link(href="#") About
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Contacts
-			+e.column._col2
-				+e.box._cat.js-accordion-item
-					+e.box-title._head.p18.js-accordion-head
-						strong Kursangebot
-					+e.box-body._cat.js-accordion-body
-						+e.list
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Fortgeschritten
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Mini-Gruppen
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Anfänger
-							+e.item.p18.is-gray
-								+e.A.link(href="#") Kraul Kurs
-			+e.column._col3
-				+e.box
-					+e.box-title.p18
-						strong Kontakt
-					+e.box-body
-						+e.list._contact.js-state
-							+e.item.p18.is-gray
-								+e.A.tel(href="tel:+4915122262204") + 49 151 222 62 204
-							+e.item.p18.is-gray
-								| Mo.- Fr. 13:00 - 16:00 Uhr
-							+e.item.p18.is-gray
-								+e.A.email(href="mailto:info@sg-mevis.de") info@sg-mevis.de
-							+e.item
-								+e.social.social__
-									+e.A.link(href="#")
-										+icon('facebook')
-									+e.A.link(href="#")
-										+icon('instagram')
-									+e.A.link(href="#")
-										+icon('twitter')
-									+e.A.link(href="#")
-										+icon('youtube')
-						+e.list._contact.js-state
-							+e.item.p18.is-gray
-								+e.A.tel(href="tel:+4935522234777") + 49 355 222 34 777
-							+e.item.p18.is-gray
-								| Mo.- Fr. 11:00 - 18:00 Uhr
-							+e.item.p18.is-gray
-								+e.A.email(href="mailto:info@sg-mevis.de") info@sg-mevis.de
-							+e.item
-								+e.social.social__
-									+e.A.link(href="#")
-										+icon('facebook')
-									+e.A.link(href="#")
-										+icon('instagram')
-									+e.A.link(href="#")
-										+icon('twitter')
-									+e.A.link(href="#")
-										+icon('youtube')
-		+e.bottom.flex._justify._vertical
-			+e.left.flex
-				+e.A.bottom-link.p16(href="#") Impressum
-				+e.A.bottom-link.p16(href="#") Datenschutz
-				+e.A.bottom-link.p16(href="#") Cookie-Richtlinie
-			+e.right
-				+e.A.develop.p16(href="https://vse.digital", target="_blank")
-					| Design by 
-					strong VSE.digital
+		+e.mobile-hidden
+			+e.row.flex
+				+e.column._col5
+					+e.A.logo(href="/main.html")
+						img(src="/app/img/logo2.svg")
+					+e.box
+						+e.box-title.p18
+							strong UNSERE ORTE:
+						+e.box-body
+							+e.list
+								+e.item.p16
+									strong Berlin – Lichtenberg 
+									br
+									span.is-gray Schwimmhalle Anton-Saefkow-Platz 1, 10369 Berlin
+								+e.item.p16
+									strong Berlin – Tiergarten 
+									br
+									span.is-gray Stadtbad Tiergarten, Seydlitzstr. 7, 10557 Berlin
+				+e.column._col2
+					+e.box._cat.js-accordion-item
+						+e.box-title._head.p18.js-accordion-head
+							strong Verein
+						+e.box-body._cat.js-accordion-body
+							+e.list
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Reviews
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Job
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Team
+								+e.item.p18
+									+e.A.link(href="#") About
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Contacts
+				+e.column._col2
+					+e.box._cat.js-accordion-item
+						+e.box-title._head.p18.js-accordion-head
+							strong Kursangebot
+						+e.box-body._cat.js-accordion-body
+							+e.list
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Fortgeschritten
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Mini-Gruppen
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Anfänger
+								+e.item.p18.is-gray
+									+e.A.link(href="#") Kraul Kurs
+				+e.column._col3
+					+e.box
+						+e.box-title.p18
+							strong Kontakt
+						+e.box-body
+							+e.list._contact.js-state
+								+e.item.p18.is-gray
+									+e.A.tel(href="tel:+4915122262204") + 49 151 222 62 204
+								+e.item.p18.is-gray
+									| Mo.- Fr. 13:00 - 16:00 Uhr
+								+e.item.p18.is-gray
+									+e.A.email(href="mailto:info@sg-mevis.de") info@sg-mevis.de
+								+e.item
+									+e.social.social__
+										+e.A.link(href="#")
+											+icon('facebook')
+										+e.A.link(href="#")
+											+icon('instagram')
+										+e.A.link(href="#")
+											+icon('twitter')
+										+e.A.link(href="#")
+											+icon('youtube')
+							+e.list._contact.js-state
+								+e.item.p18.is-gray
+									+e.A.tel(href="tel:+4935522234777") + 49 355 222 34 777
+								+e.item.p18.is-gray
+									| Mo.- Fr. 11:00 - 18:00 Uhr
+								+e.item.p18.is-gray
+									+e.A.email(href="mailto:info@sg-mevis.de") info@sg-mevis.de
+								+e.item
+									+e.social.social__
+										+e.A.link(href="#")
+											+icon('facebook')
+										+e.A.link(href="#")
+											+icon('instagram')
+										+e.A.link(href="#")
+											+icon('twitter')
+										+e.A.link(href="#")
+											+icon('youtube')
+			+e.bottom.flex._justify._vertical
+				+e.left.flex
+					+e.A.bottom-link.p16(href="#") Impressum
+					+e.A.bottom-link.p16(href="#") Datenschutz
+					+e.A.bottom-link.p16(href="#") Cookie-Richtlinie
+				+e.right
+					+e.A.develop.p16(href="https://vse.digital", target="_blank")
+						| Design by 
+						strong VSE.digital
+		+e.mobile-visible
+			+e.top.flex
+				+e.A.top-link(href="#") Verein
+				+e.A.top-link(href="#") Kursangebot
+				+e.A.top-link(href="#") Reviews
+				+e.A.top-link(href="#") About
+				+e.A.top-link(href="#") Team
+				+e.A.top-link(href="#") Job
+				+e.A.top-link(href="#") Contacts
+			+e.adress
+				+e.title UNSERE ORTE:
+				+e.adress-item
+					strong Berlin – Lichtenberg
+					br
+					span Schwimmhalle Anton-Saefkow-Platz 1, 10369 Berlin
+				+e.adress-item
+					strong Berlin – Tiergarten
+					br
+					span Stadtbad Tiergarten, Seydlitzstr. 7, 10557 Berlin
+			+e.contact
+				+e.title Kontakt
+				+e.row.flex
+					+e.col
+						+e.contact-item
+							a(href="mailto:info@sg-mevis.de") info@sg-mevis.de
+						+e.contact-item
+							a(href="tel:+4915122262204") + 49 151 222 62 204
+					+e.col
+						+e.contact-item
+							| Mo.- Fr. 13:00 - 16:00 Uhr
+						+e.contact-item
+							a(href="tel:+4943111298931") + 49 431 112 98 931
+			+e.social.social__
+				+e.A.link(href="#")
+					+icon('facebook')
+				+e.A.link(href="#")
+					+icon('instagram')
+				+e.A.link(href="#")
+					+icon('twitter')
+				+e.A.link(href="#")
+					+icon('youtube')
+			+e.bottom.flex
+				+e.A.link(href="#") Impressum
+				+e.A.link(href="#") Datenschutz
+				+e.A.link(href="#") Cookie-Richtlinie
+				+e.A.link(href="#") AGB
+			+e.develop
+				+e.A.link(href="#") Design by VSE.digital
