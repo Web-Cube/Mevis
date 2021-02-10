@@ -65,8 +65,37 @@
 	}
 	
 	@include max-screen($small_mobile) {
-		&__bottom, &__buttons {
-			
+		background: none!important;
+		padding: 120rem 0 100rem 0;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 95%;
+			display: block;
+			background: url(/img/main__bg2.jpg) top no-repeat;
+			background-size: auto 100%;
+		}
+		&__buttons {
+			margin-top: 60px;
+		}
+		&__bottom {
+			text-align: right;
+			justify-content: flex-end;
+			margin-top: 80px;
+			overflow: visible;
+			&-text {
+				font-size: 16px;
+				line-height: 130%;
+				font-style: italic;
+				overflow: visible;
+				font-weight: normal;
+				&:before, &:after {
+					display: none;
+				}
+			}
 		}
 	}
 }
